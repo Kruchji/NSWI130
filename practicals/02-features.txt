@@ -1,0 +1,41 @@
+Vypisovani terminu
+Ucitel: informacie pre ziakov na splnenie predmetu
+MVP: bez vypísania podmienok na splnenie termínu študenti nevedia ako budú hodnotení, preto môže byť ich príprava nedostatočná a následne viesť k nesplneniu predmetu, čo nie je v záujme študentov a aj vyučujúcich
+
+zapis studentu
+Student: aby mohol splnit predmet
+MVP: Neboť je to základní feature, která umožňuje elektronické zapisování na termíny a jednoduché zobrazení všech dostupných termínů.
+
+zapis a zmenu znamky
+Ucitel: informovat o vysledku a napravil chyby
+MVP: Dôležité pre správne fungovanie systému. Študent je oboznámený s výsledkom a vyučujúci vie koľko ľudí už prešlo skúškou.
+
+statistika:
+Manazer: Aby mohol urobit pripadne zmeny
+
+validacia zapoctu:
+Ucitel: Aby vedel, ci ziak splna podmienky
+
+odhlaseni zmena
+Ziak: Zmena rozhodnutia ziaka
+
+cakacka
+Ziak: Prihlasenie na potencialny termin
+
+notifikacie
+Ziak: Aby ziak vedel, ze sa moze zapisat
+
+info
+Ziak: Informacie, aby ziak mohol ist na skusku pripraveny
+MVP: key feature for student so they have knowledge about the exam and can arrive on the right time at the right place
+
+rezervacie
+Ucitel: Aby neboli konflikty pri terminom miestnosti
+MVP: Ucitel potrebuje, aby si rezervoval termin na zkousku. Ma problemy s tim, ze ostatni ucitele si muzou zarezervovat stejnou mistnost a cas. Tahle feature slouzi, aby se ucitele nemuseli domlouvat, ale vedeli, ze kdyz si zapisou cas, tak nikdo jiny jim ho nezebere.
+
+zapis informacii
+Ucitel: Vyplneni informacie o terminu
+MVP: bez tejto funkcionality ucitel nebude vediet pridat dolezite info o skuske, co sposobi nedostatok informacii pre studenta ohladom zapisanej skusky.
+
+rozdelovanie studentov
+Ucitel: Alokacie medzi ucitelov a casy
