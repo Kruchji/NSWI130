@@ -1,0 +1,35 @@
+Vypisovani terminu
+Ucitel: informacie pre ziakov na splnenie predmetu
+
+zapis studentu
+Student: aby mohol splnit predmet
+
+zapis a zmenu znamky
+Ucitel: informovat o vysledku a napravil chyby
+
+statistika:
+Manazer: Aby mohol urobit pripadne zmeny
+
+validacia zapoctu:
+Ucitel: Aby vedel, ci ziak splna podmienky
+
+odhlaseni zmena
+Ziak: Zmena rozhodnutia ziaka
+
+cakacka
+Ziak: Prihlasenie na potencialny termin
+
+notifikacie
+Ziak: Aby ziak vedel, ze sa moze zapisat
+
+info
+Ziak: Informacie, aby ziak mohol ist na skusku pripraveny
+
+rezervacie
+Ucitel: Aby neboli konflikty pri terminom miestnosti
+
+zapis informacii
+Ucitel: Vyplneni informacie o terminu
+
+rozdelovanie studentov
+Ucitel: Alokacie medzi ucitelov a casy
