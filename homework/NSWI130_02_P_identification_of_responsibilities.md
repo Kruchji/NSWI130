@@ -100,4 +100,49 @@ Ako učiteľ chcem mať možnosť informovať študentov o získanej známke pr�
 
 * Run...
 
-<!-- Continue with ### sections for all other features. -->
+### Feature: Notifikácie
+
+<!-- The feature described in a form of a user story -->
+Ako žiak chcem byť oboznámený notifikáciou v prípade, že je vypísaný nový termín z predmetu, ktorý mám zapísaný. Aby som sa mohol na ne zapísať a poprípade preplánovať iné skúšky.
+
+#### Feature breakdown
+
+<!-- The feature breakdown -->
+1) Keď systém detekuje, že učiteľ vypísal nový termín daného predmetu, systém vyhľadá žiakov zapísaných na daný predmet a pošle im informáciu o novom termíne. 
+
+#### Responsibilities
+
+<!-- A ##### section for each group of responsibilities -->
+
+##### Notifikačné responsibilities
+
+* Detekcia pridania nového termínu
+* Vygenerovanie emailu
+* Zaslanie emailu s informáciami o termíne
+
+<!-- A ### section for each feature -->
+### Feature: Odhlásenie zo skúšky
+
+<!-- The feature described in a form of a user story -->
+Ako študent chcem mať možnosť odhlásiť sa zo skúšky v danom termíne. Z dôvodu už nevyhovujúceho termínu skúšky, či už z časových, zdravotných alebo iných dôvodov.
+
+#### Feature breakdown
+
+<!-- The feature breakdown -->
+1) Student se přihlásí do systému (dashboard) a klikne na tlačítko zobrazení všech zapsaných skoušek.
+2) Systém zde zobrazí v kalendáři nebo seznamu všechny termíny zkoušek, na které se student zapsal.
+3) Student klikne na podrobnosti termínu, z kterého se chce odhlásit.
+4) Student klikne na tlačítko odhlásit.
+5) Systém poté: 
+    1) Zobrazí oznámení o neúspěšném odhlásení.
+    2) Obnoví zobrazení stránky termínu jako když ho student neměl přihlásený a zobrazí oznámení o úspěšném odhlásení z termínu.
+
+#### Responsibilities
+
+<!-- A ##### section for each group of responsibilities -->
+
+##### Práce s databází
+
+* Získanie zapísaných termínov žiaka
+* Získanie informácií o termíne
+* Vymazanie termínu zo zapísaných
