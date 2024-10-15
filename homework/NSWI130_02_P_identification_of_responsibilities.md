@@ -27,11 +27,77 @@ Jako učitel chci mít možnost vypisovat termíny zkoušek pro všechny své p�
 <!-- A ##### section for each group of responsibilities -->
 
 ##### Responsibilities 1
+
 * Integrate...
 * Ensure...
 
 ##### Responsibilities 2
+
 * Run...
 
+<!-- A ### section for each feature -->
+### Feature: Zapis studentu
+
+<!-- The feature described in a form of a user story -->
+Ako študent chcem úspešne dokončiť predmet a preto chcem mať možnosť sa zapísať na vypísané termíny skúšok a zápočtov.
+
+#### Feature breakdown
+
+<!-- The feature breakdown -->
+1) Student se přihlásí do systému (dashboard) a klikne na tlačítko zobrazení všech termínů zkoušek.
+2) Systém zde zobrazí v kalendáři nebo seznamu všechny dostupné termíny zkoušek pro předměty, které má student zapsané.
+3) Student zde může vyfiltrovat určitý předmět.
+4) Student vybere určitý termín a klikne na jeho podrobnosti.
+5) Systém zobrazí podrobné informace o předmětu s tlačítkem pro zápis.
+6) Student klikne na tlačítko zápis pro zapsání tohoto termínu.
+7) Systém poté:
+    1) Vrátí studenta na seznam všech termínů s hláškou úspěšného zapsání.
+    2) Vrátí studenta na seznam všech termínů s hláškou úspěšného zapsání na čekací listinu.
+    3) Vypíše chybu při zapisování a vrátí studenta na podrobnosti termínu.
+
+#### Responsibilities
+
+<!-- A ##### section for each group of responsibilities -->
+
+##### Responsibilities 1
+
+* Integrate...
+* Ensure...
+
+##### Responsibilities 2
+
+* Run...
+
+<!-- A ### section for each feature -->
+### Feature: Zapis a zmenu znamky
+
+<!-- The feature described in a form of a user story -->
+Ako učiteľ chcem mať možnosť informovať študentov o získanej známke prípadne zápočte cez informačný systém. V prípade omylu na mojej strane alebo opravenia si známky študenta následne opraviť pôvodne zapísanú známku/zápočet.
+
+#### Feature breakdown
+
+<!-- The feature breakdown -->
+1) Učiteľ sa prihlási do systému a klikne na tlačidlo predmety.
+2) V časti predmety zo zoznamu svojich vyučovaných predmetov vyberie ten, z ktorého chce známku zapísať/zmeniť.
+3) Učiteľovi sa zobrazí zoznam prihlásených žiakov na vybraný predmet.
+4) Učiteľ do poľa vyhľadať napíše meno žiaka, ktorému chce známku zapísať.
+5) Vo výsledkoch vyhľadávania klikne na žiaka.
+6) Otvoria sa výsledky žiaka z daného predmetu.
+7) V poli známka stlačí tlačidlo upraviť.
+8) Do zobrazeneho poľa vpíše známku.
+9) pre uloženie zmeny klikne učiteľ na tlačidlo Uložiť.
+
+#### Responsibilities
+
+<!-- A ##### section for each group of responsibilities -->
+
+##### Responsibilities 1
+
+* Integrate...
+* Ensure...
+
+##### Responsibilities 2
+
+* Run...
 
 <!-- Continue with ### sections for all other features. -->
