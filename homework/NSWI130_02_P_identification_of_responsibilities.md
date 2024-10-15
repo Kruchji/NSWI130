@@ -59,14 +59,12 @@ Ako študent chcem úspešne dokončiť predmet a preto chcem mať možnosť sa 
 
 <!-- A ##### section for each group of responsibilities -->
 
-##### Responsibilities 1
+##### Práca s databázou
 
-* Integrate...
-* Ensure...
-
-##### Responsibilities 2
-
-* Run...
+* Získať zoznam predmetov, ktoré má študent zapísané
+* Získať zoznam termínov pre predmety, ktoré má študent zapísané
+* Získať informácie pre konkrétny zvolený termín
+* Zapísať študenta na konkrétny termín
 
 <!-- A ### section for each feature -->
 ### Feature: Zapis a zmenu znamky
@@ -91,14 +89,11 @@ Ako učiteľ chcem mať možnosť informovať študentov o získanej známke pr�
 
 <!-- A ##### section for each group of responsibilities -->
 
-##### Responsibilities 1
+##### Práca s databázou
 
-* Integrate...
-* Ensure...
-
-##### Responsibilities 2
-
-* Run...
+* Získať zoznam predmetov, ktoré daný učiteľ vyučuje
+* Získať zoznam študentov prihlásených na konkrétny predmet
+* Zápisať konkrétnemu študentovi zvolenú známku
 
 ### Feature: Notifikácie
 
@@ -108,7 +103,7 @@ Ako žiak chcem byť oboznámený notifikáciou v prípade, že je vypísaný no
 #### Feature breakdown
 
 <!-- The feature breakdown -->
-1) Keď systém detekuje, že učiteľ vypísal nový termín daného predmetu, systém vyhľadá žiakov zapísaných na daný predmet a pošle im informáciu o novom termíne. 
+1) Keď systém detekuje, že učiteľ vypísal nový termín daného predmetu, systém vyhľadá žiakov zapísaných na daný predmet a pošle im informáciu o novom termíne.
 
 #### Responsibilities
 
@@ -133,7 +128,7 @@ Ako študent chcem mať možnosť odhlásiť sa zo skúšky v danom termíne. Z 
 2) Systém zde zobrazí v kalendáři nebo seznamu všechny termíny zkoušek, na které se student zapsal.
 3) Student klikne na podrobnosti termínu, z kterého se chce odhlásit.
 4) Student klikne na tlačítko odhlásit.
-5) Systém poté: 
+5) Systém poté:
     1) Zobrazí oznámení o neúspěšném odhlásení.
     2) Obnoví zobrazení stránky termínu jako když ho student neměl přihlásený a zobrazí oznámení o úspěšném odhlásení z termínu.
 
