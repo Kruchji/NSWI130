@@ -132,13 +132,13 @@ Ako študent chcem mať možnosť odhlásiť sa zo skúšky v danom termíne. Z 
 #### Feature breakdown
 
 <!-- The feature breakdown -->
-1) Student se přihlásí do systému (dashboard) a klikne na tlačítko zobrazení všech zapsaných skoušek.
+1) Student se přihlásí do systému (dashboard) a klikne na tlačítko zobrazení všech zapsaných zkoušek.
 2) Systém zde zobrazí v kalendáři nebo seznamu všechny termíny zkoušek, na které se student zapsal.
 3) Student klikne na podrobnosti termínu, z kterého se chce odhlásit.
 4) Student klikne na tlačítko odhlásit.
 5) Systém poté:
-    1) Zobrazí oznámení o neúspěšném odhlásení.
-    2) Obnoví zobrazení stránky termínu jako když ho student neměl přihlásený a zobrazí oznámení o úspěšném odhlásení z termínu.
+    1) Zobrazí oznámení o neúspěšném odhlášení.
+    2) Obnoví zobrazení stránky termínu jako když ho student neměl přihlášený a zobrazí oznámení o úspěšném odhlášení z termínu.
 
 #### Responsibilities
 
@@ -230,7 +230,7 @@ Jako student bych se rád zapsal do čekací listiny u termínů, které jsou pr
 #### Feature breakdown
 
 <!-- The feature breakdown -->
-1) Po prihlaseni student klikne na tlačítko zobrazeni terminu skousek
+1) Po přihlášení student klikne na tlačítko zobrazeni terminu zkoušek
 2) Zde student klikne na zobrazení informací o termínu, na jehož čekací listinu se bude chtít zapsat.
 3) Na této stránce s informacemi o termínu se zobrazí počet zapsaných a maximální počet studentů.
 4) Pokud jsou tyto počty rovné, tak je zobrazeno tlačítko pro zápis na čekací listinu.
