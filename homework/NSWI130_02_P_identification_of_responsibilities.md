@@ -82,7 +82,7 @@ Ako študent chcem úspešne dokončiť predmet a preto chcem mať možnosť sa 
 * Zobraziť úspech/neúspech prihlásenia študentovi
 
 <!-- A ### section for each feature -->
-### Feature: Zapis a zmenu znamky
+### Feature: Zapis a zmena znamky
 
 <!-- The feature described in a form of a user story -->
 Ako učiteľ chcem mať možnosť informovať študentov o získanej známke prípadne zápočte cez informačný systém. V prípade omylu na mojej strane alebo opravenia si známky študenta následne opraviť pôvodne zapísanú známku/zápočet.
@@ -98,7 +98,7 @@ Ako učiteľ chcem mať možnosť informovať študentov o získanej známke pr�
 6) Otvoria sa výsledky žiaka z daného predmetu.
 7) V poli známka stlačí tlačidlo upraviť.
 8) Do zobrazeneho poľa vpíše známku.
-9) pre uloženie zmeny klikne učiteľ na tlačidlo Uložiť.
+9) Pre uloženie zmeny klikne učiteľ na tlačidlo Uložiť.
 
 #### Responsibilities
 
@@ -133,6 +133,10 @@ Ako žiak chcem byť oboznámený notifikáciou v prípade, že je vypísaný no
 * Vygenerovanie emailu
 * Zaslanie emailu s informáciami o termíne
 
+##### Zobrazenie
+
+* Zabezpečiť zobrazenie kalendára s prihlásenými skúškami
+
 <!-- A ### section for each feature -->
 ### Feature: Odhlásenie zo skúšky
 
@@ -154,11 +158,15 @@ Ako študent chcem mať možnosť odhlásiť sa zo skúšky v danom termíne. Z 
 
 <!-- A ##### section for each group of responsibilities -->
 
-##### Práce s databází
+##### Odhlásenie študenta z termínu
+
+* Vymazanie termínu zo zapísaných
+* Zobraziť úspech/neúspech odhlásenia študentovi
+
+##### Zobrazenie informácií o termíne
 
 * Získanie zapísaných termínov žiaka
-* Získanie informácií o termíne
-* Vymazanie termínu zo zapísaných
+* Získanie informácií o danom termíne
 
 <!-- A ### section for each feature -->
 ### Feature: Zobrazení informací o zkoušce
