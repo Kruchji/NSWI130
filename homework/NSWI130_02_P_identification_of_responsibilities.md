@@ -141,3 +141,31 @@ Ako študent chcem mať možnosť odhlásiť sa zo skúšky v danom termíne. Z 
 * Získanie zapísaných termínov žiaka
 * Získanie informácií o termíne
 * Vymazanie termínu zo zapísaných
+
+<!-- A ### section for each feature -->
+### Feature: Zobrazení informací o zkoušce
+
+<!-- The feature described in a form of a user story -->
+Jako student chci mít možnost si zobrazit všechny informace o zkoušce, abych na ní mohl dorazit a úspěšně jí splnit.
+
+#### Feature breakdown
+
+<!-- The feature breakdown -->
+1) Žák je na stránce přihlášených zkoušek.
+2) Vybere konkrétní zkoušku
+3) Zobrazí se stránka s informacemi ke zkoušce
+4) Stránka obsahuje základní informace o konání zkoušky: místo, datum, čas, učitel
+5) Stránka obsahuje jakékoli další info, které učitel ke zkoušce zapsal: délka trvání, forma zkoušky, speciální požadavky, dresscode, atd.
+
+#### Responsibilities
+
+<!-- A ##### section for each group of responsibilities -->
+
+##### Práce s databází
+
+* Získání zapsaných termínů žáka
+* Získání informací o konkrétním termínu
+
+##### Prezentace
+
+* Zobrazení stránky termínu s informacemi z databáze
