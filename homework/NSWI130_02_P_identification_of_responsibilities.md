@@ -202,7 +202,7 @@ Jako učitel potřebuji mít možnost upravit informace o zkoušce a termínech 
 ##### Zobrazování termínů
 
 * Získání seznamu termínů z databáze
-* Filtrování těchto termínů pro zobrazování pouze těch, které se týkají pčihlášeného učitele
+* Filtrování těchto termínů pro zobrazování pouze těch, které se týkají přihlášeného učitele
 
 ##### Posílání notifikace o výpomoci
 
@@ -220,3 +220,42 @@ Jako učitel potřebuji mít možnost upravit informace o zkoušce a termínech 
 * Shrnutí všech změn termínu do jedné zprávy
 * Získání e-mailových adres všech studentu z databáze, kterých se termín týká
 * Úspěšné odeslání e-mailu se změnami všem těmto studentům
+
+<!-- A ### section for each feature -->
+### Feature: Zápis na čekací listinu termínu
+
+<!-- The feature described in a form of a user story -->
+Jako student bych se rád zapsal do čekací listiny u termínů, které jsou právě plné. Takto nebude třeba aktivně sledovat, zdali se již místo na termínu neuvolnilo. Rád bych byl automaticky zapsán a o této změně notifikován.
+
+#### Feature breakdown
+
+<!-- The feature breakdown -->
+1) Po prihlaseni student klikne na tlačítko zobrazeni terminu skousek
+2) Zde student klikne na zobrazení informací o termínu, na jehož čekací listinu se bude chtít zapsat.
+3) Na této stránce s informacemi o termínu se zobrazí počet zapsaných a maximální počet studentů.
+4) Pokud jsou tyto počty rovné, tak je zobrazeno tlačítko pro zápis na čekací listinu.
+5) Kliknutím na něj pošle student požadavek systému pro zapsání do čekací listiny.
+6) Student je přesměrován znovu na stránku informací o termínu:
+    1) Při úspěchu je zobrazena jeho pozice na čekací listině a tlačítko pro odhlášení z čekací listiny.
+    2) Při neúspěchu je zobrazena chybová hláška.
+
+#### Responsibilities
+
+<!-- A ##### section for each group of responsibilities -->
+
+##### Zobrazování termínů
+
+* Získání seznamu termínů z databáze
+* Filtrování těchto termínů pro zobrazování pouze těch, které se týkají přihlášeného studenta
+
+##### Zobrazování informací o termínu
+
+* Získání informací o termínu z databáze
+* Zobrazení počtu přihlášených studentů
+* Případné zobrazení tlačítka přihlášení na čekací listinu
+
+##### Zapisování na čekací listinu
+
+* Zapsání studenta do čekací listiny v databázi
+* Zobrazení pozice v této listině na stránce s informacemi o termínu
+* Zobrazení chybové hlášky v případě neúspěchu
