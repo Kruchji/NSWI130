@@ -67,12 +67,19 @@ Ako študent chcem úspešne dokončiť predmet a preto chcem mať možnosť sa 
 
 <!-- A ##### section for each group of responsibilities -->
 
-##### Práca s databázou
+##### Zobrazenie termínov pre študenta
 
 * Získať zoznam predmetov, ktoré má študent zapísané
 * Získať zoznam termínov pre predmety, ktoré má študent zapísané
+
+##### Zobrazenie podrobností pre termín
+
 * Získať informácie pre konkrétny zvolený termín
+
+##### Prihlásenie študenta na konkrétny termín
+
 * Zapísať študenta na konkrétny termín
+* Zobraziť úspech/neúspech prihlásenia študentovi
 
 <!-- A ### section for each feature -->
 ### Feature: Zapis a zmenu znamky
@@ -97,10 +104,13 @@ Ako učiteľ chcem mať možnosť informovať študentov o získanej známke pr�
 
 <!-- A ##### section for each group of responsibilities -->
 
-##### Práca s databázou
+##### Zobraziť študentov pre konkrétny predmet
 
 * Získať zoznam predmetov, ktoré daný učiteľ vyučuje
 * Získať zoznam študentov prihlásených na konkrétny predmet
+
+##### Zapísať známku konkrétnemu študentovi
+
 * Zápisať konkrétnemu študentovi zvolenú známku
 
 ### Feature: Notifikácie
