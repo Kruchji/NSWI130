@@ -29,6 +29,9 @@ Jako učitel chci mít možnost vypisovat termíny zkoušek pro všechny své p�
 ##### Zobrazování termínů učiteli
 
 * Zajistit, že databáze poskytne veškerá potřebná data
+
+##### Monitorovaní konfliktů v harmonogramu učitele
+
 * Vyznačit konfliktní termíny v rámci času a místnosti
 
 ##### Zobrazování formuláře tvorby nového termínu
@@ -39,7 +42,7 @@ Jako učitel chci mít možnost vypisovat termíny zkoušek pro všechny své p�
 
 ##### Ukládání nových termínů
 
-* Zajistit, že jsou data správně uložena do databáze
+* Zajistit, že jsou data správně uložena do databáze - validace dat
 * Informovat učitele o úspěšném / neúspěšném vytvoření nového termínu
 * Spustit detekci konfliktů na aktualizovaný seznam termínů
 
@@ -71,10 +74,12 @@ Ako študent chcem úspešne dokončiť predmet a preto chcem mať možnosť sa 
 
 * Získať zoznam predmetov, ktoré má študent zapísané
 * Získať zoznam termínov pre predmety, ktoré má študent zapísané
+* Zobraziť študentovi termíny pre jeho predmety
 
 ##### Zobrazenie podrobností pre termín
 
 * Získať informácie pre konkrétny zvolený termín
+* Zobraziť študentovi informácie pre zvolený termín
 
 ##### Prihlásenie študenta na konkrétny termín
 
@@ -108,10 +113,11 @@ Ako učiteľ chcem mať možnosť informovať študentov o získanej známke pr�
 
 * Získať zoznam predmetov, ktoré daný učiteľ vyučuje
 * Získať zoznam študentov prihlásených na konkrétny predmet
+* Zobraziť zoznam študentov učiteľovi spolu s poľom na zapísanie známky/zápočtu
 
 ##### Zapísať známku konkrétnemu študentovi
 
-* Zápisať konkrétnemu študentovi zvolenú známku
+* Zapísať konkrétnemu študentovi zvolenú známku
 
 <!-- A ### section for each feature -->
 ### Feature: Odhlásenie zo skúšky
@@ -136,7 +142,7 @@ Ako študent chcem mať možnosť odhlásiť sa zo skúšky v danom termíne. Z 
 
 ##### Odhlásenie študenta z termínu
 
-* Vymazanie termínu zo zapísaných
+* Vymazanie termínu zo zapísaných 
 * Zobraziť úspech/neúspech odhlásenia študentovi
 
 ##### Zobrazenie informácií o termíne
@@ -201,6 +207,7 @@ Jako učitel potřebuji mít možnost upravit informace o zkoušce a termínech 
 ##### Posílání notifikace o výpomoci
 
 * Zobrazení notifikace na dashboardě učitelům, od kterých byla vyžádána výpomoc
+* Upozornění bude obsahovat link na potvrzení nebo odmítnutí výpomoci
 
 ##### Ukládání změn informací o termínu
 
