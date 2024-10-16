@@ -113,30 +113,6 @@ Ako učiteľ chcem mať možnosť informovať študentov o získanej známke pr�
 
 * Zápisať konkrétnemu študentovi zvolenú známku
 
-### Feature: Notifikácie
-
-<!-- The feature described in a form of a user story -->
-Ako žiak chcem byť oboznámený notifikáciou v prípade, že je vypísaný nový termín z predmetu, ktorý mám zapísaný. Aby som sa mohol na ne zapísať a poprípade preplánovať iné skúšky.
-
-#### Feature breakdown
-
-<!-- The feature breakdown -->
-1) Keď systém detekuje, že učiteľ vypísal nový termín daného predmetu, systém vyhľadá žiakov zapísaných na daný predmet a pošle im informáciu o novom termíne.
-
-#### Responsibilities
-
-<!-- A ##### section for each group of responsibilities -->
-
-##### Notifikačné responsibilities
-
-* Detekcia pridania nového termínu
-* Vygenerovanie emailu
-* Zaslanie emailu s informáciami o termíne
-
-##### Zobrazenie
-
-* Zabezpečiť zobrazenie kalendára s prihlásenými skúškami
-
 <!-- A ### section for each feature -->
 ### Feature: Odhlásenie zo skúšky
 
