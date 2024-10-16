@@ -177,3 +177,46 @@ Jako student chci mít možnost si zobrazit všechny informace o zkoušce, abych
 ##### Prezentace
 
 * Zobrazení stránky termínu s informacemi z databáze
+
+<!-- A ### section for each feature -->
+### Feature: Úprava informací o zkoušce
+
+<!-- The feature described in a form of a user story -->
+Jako učitel potřebuji mít možnost upravit informace o zkoušce a termínech i po jejich vypsání, pokud dojde k nečekaným změnám. Studenti musí býti dostatečně informováni o případných změnách.
+
+#### Feature breakdown
+
+<!-- The feature breakdown -->
+1) Po prihlaseni ucitel klikne na policko zobrazeni terminu skousek
+2) Po presmerovani ucitel klikne na policko rezervovane terminy, kde najde svuj termin
+3) Stranka vyhodi formular s polickami: Predmet, Kapacita, Prerekvizity, (optional) Upresneni casove alokace, (optional) Pridat vypomoc, (optional) vice info
+    1) System posle Vypomocnu poziadavku zadaným učitelům, kteří ji najdou na dashboarde v spravach.
+4) Po vyplneni a submite stranka spracuje request a upozorni, ci sa ulozily zmeny
+5) Stranka presmeruje spatky na polozku rezervovane terminy
+6) Studenti, kterých se termín týkal, jsou o změně informování emailem.
+
+#### Responsibilities
+
+<!-- A ##### section for each group of responsibilities -->
+
+##### Zobrazování termínů
+
+* Získání seznamu termínů z databáze
+* Filtrování těchto termínů pro zobrazování pouze těch, které se týkají pčihlášeného učitele
+
+##### Posílání notifikace o výpomoci
+
+* Zobrazení notifikace na dashboardě učitelům, od kterých byla vyžádána výpomoc
+
+##### Ukládání změn informací o termínu
+
+* Validace všech vstupů
+* Zapsání do databáze
+* Detekce konfliktů
+* Přesměrování uživatele při úspěšném zapsání
+
+##### Posílání e-mailové notifikace
+
+* Shrnutí všech změn termínu do jedné zprávy
+* Získání e-mailových adres všech studentu z databáze, kterých se termín týká
+* Úspěšné odeslání e-mailu se změnami všem těmto studentům
