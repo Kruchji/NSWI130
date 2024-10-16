@@ -26,14 +26,22 @@ Jako učitel chci mít možnost vypisovat termíny zkoušek pro všechny své p�
 
 <!-- A ##### section for each group of responsibilities -->
 
-##### Responsibilities 1
+##### Zobrazování termínů učiteli
 
-* Integrate...
-* Ensure...
+* Zajistit, že databáze poskytne veškerá potřebná data
+* Vyznačit konfliktní termíny v rámci času a místnosti
 
-##### Responsibilities 2
+##### Zobrazování formuláře tvorby nového termínu
 
-* Run...
+* Systém musí zobrazit všechna potřebná pole
+* Zajistit, že učitel může vytvořit termíny pouze pro jeden z jeho předmětů
+* Umožnit výběr seznamu studentů, pro které je tento termín určený
+
+##### Ukládání nových termínů
+
+* Zajistit, že jsou data správně uložena do databáze
+* Informovat učitele o úspěšném / neúspěšném vytvoření nového termínu
+* Spustit detekci konfliktů na aktualizovaný seznam termínů
 
 <!-- A ### section for each feature -->
 ### Feature: Zapis studentu
