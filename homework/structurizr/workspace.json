@@ -1,0 +1,200 @@
+{
+  "configuration" : { },
+  "description" : "Description",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2024-10-22T21:45:28Z",
+  "model" : {
+    "people" : [ {
+      "description" : "Vytvari terminy na zkousky a zapisuje hodnoceni",
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Učitel",
+      "properties" : {
+        "structurizr.dsl.identifier" : "ucitel"
+      },
+      "relationships" : [ {
+        "description" : "Zobrazení termínu",
+        "destinationId" : "1",
+        "id" : "6",
+        "properties" : {
+          "structurizr.dsl.identifier" : "c322bccb-c739-4439-92da-b49a49734740"
+        },
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Vytvari terminy a zapisuje znamky",
+        "destinationId" : "1",
+        "id" : "7",
+        "properties" : {
+          "structurizr.dsl.identifier" : "9bc6773b-d50a-4c4a-8f3b-0a8cc75f345d"
+        },
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Zapisuje si terminy zkousek a diva se jak dopadli",
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "Student",
+      "properties" : {
+        "structurizr.dsl.identifier" : "student"
+      },
+      "relationships" : [ {
+        "description" : "Čte výsledky zkoušek",
+        "destinationId" : "1",
+        "id" : "8",
+        "properties" : {
+          "structurizr.dsl.identifier" : "50d4cb73-f08a-4bfa-b6ff-e08966da59db"
+        },
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Zapisuje si zkoušky",
+        "destinationId" : "1",
+        "id" : "9",
+        "properties" : {
+          "structurizr.dsl.identifier" : "71dbd29b-adb3-4d81-9dd9-b64967411193"
+        },
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Dela statistiky a spravuje vyucujici",
+      "id" : "5",
+      "location" : "Unspecified",
+      "name" : "Manažer",
+      "properties" : {
+        "structurizr.dsl.identifier" : "manazer"
+      },
+      "relationships" : [ {
+        "description" : "Čte statistiky",
+        "destinationId" : "1",
+        "id" : "10",
+        "properties" : {
+          "structurizr.dsl.identifier" : "483c4dce-f4b9-4ce8-9b5d-2a8190c13848"
+        },
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "Spravuje vytvareni zkousek, zapis studentu a monitoruje jejich vysledky",
+      "documentation" : { },
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "Zkoušky v rámci SIS",
+      "properties" : {
+        "structurizr.dsl.identifier" : "sisexams"
+      },
+      "relationships" : [ {
+        "description" : "API na zistení a zápis dat",
+        "destinationId" : "2",
+        "id" : "11",
+        "properties" : {
+          "structurizr.dsl.identifier" : "79e5ce74-f733-4916-86f9-649d35cc2157"
+        },
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Software System"
+    }, {
+      "description" : "Spravuje data veci, co se dejou na univerzite. Vcetne zkousek, predmetu a zapisu.",
+      "documentation" : { },
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "SIS",
+      "properties" : {
+        "structurizr.dsl.identifier" : "sis"
+      },
+      "tags" : "Element,Software System,Existing System"
+    } ]
+  },
+  "name" : "Name",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlICJOYW1lIiAiRGVzY3JpcHRpb24iIHsKCiAgICAhaWRlbnRpZmllcnMgaGllcmFyY2hpY2FsCgogICAgbW9kZWwgewogICAgICAgICMgU1cgU3lzdGVtcwogICAgICAgIFNJU0V4YW1zID0gc29mdHdhcmVTeXN0ZW0gIlprb3XFoWt5IHYgcsOhbWNpIFNJUyIgIlNwcmF2dWplIHZ5dHZhcmVuaSB6a291c2VrLCB6YXBpcyBzdHVkZW50dSBhIG1vbml0b3J1amUgamVqaWNoIHZ5c2xlZGt5IgoKICAgICAgICBTSVMgPSBzb2Z0d2FyZVN5c3RlbSAiU0lTIiAiU3ByYXZ1amUgZGF0YSB2ZWNpLCBjbyBzZSBkZWpvdSBuYSB1bml2ZXJ6aXRlLiBWY2V0bmUgemtvdXNlaywgcHJlZG1ldHUgYSB6YXBpc3UuIiAiRXhpc3RpbmcgU3lzdGVtIgoKICAgICAgICAjIGFjdG9ycwogICAgICAgIHVjaXRlbCA9IHBlcnNvbiAiVcSNaXRlbCIgIlZ5dHZhcmkgdGVybWlueSBuYSB6a291c2t5IGEgemFwaXN1amUgaG9kbm9jZW5pIgogICAgICAgIHN0dWRlbnQgPSBwZXJzb24gIlN0dWRlbnQiICJaYXBpc3VqZSBzaSB0ZXJtaW55IHprb3VzZWsgYSBkaXZhIHNlIGphayBkb3BhZGxpIgogICAgICAgIG1hbmF6ZXIgPSBwZXJzb24gIk1hbmHFvmVyIiAiRGVsYSBzdGF0aXN0aWt5IGEgc3ByYXZ1amUgdnl1Y3VqaWNpIgoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiB1c2VycyBhbmQgRXhhbXMgc3lzdGVtCiAgICAgICAgdWNpdGVsIC0+IFNJU0V4YW1zICJab2JyYXplbsOtIHRlcm3DrW51IgogICAgICAgIHVjaXRlbCAtPiBTSVNFeGFtcyAiVnl0dmFyaSB0ZXJtaW55IGEgemFwaXN1amUgem5hbWt5IgogICAgICAgIHN0dWRlbnQgLT4gU0lTRXhhbXMgIsSMdGUgdsO9c2xlZGt5IHprb3XFoWVrIgogICAgICAgIHN0dWRlbnQgLT4gU0lTRXhhbXMgIlphcGlzdWplIHNpIHprb3XFoWt5IgogICAgICAgIG1hbmF6ZXIgLT4gU0lTRXhhbXMgIsSMdGUgc3RhdGlzdGlreSIKCiAgICAgICAgIyBSZWxhdGlvbnNoaXBzIGJldHdlZW4gU1cgU3lzdGVtcwogICAgICAgIFNJU0V4YW1zIC0+IFNJUyAiQVBJIG5hIHppc3RlbsOtIGEgesOhcGlzIGRhdCIKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtQ29udGV4dCBTSVNFeGFtcyAiU0lTRXhhbXNEaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgdGhlbWUgZGVmYXVsdAoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJFeGlzdGluZyBTeXN0ZW0iIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBjeWxpbmRlcgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKfQ=="
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "SISExamsDiagram",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : {
+        "elements" : [ {
+          "background" : "#999999",
+          "color" : "#ffffff",
+          "tag" : "Existing System"
+        }, {
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        } ]
+      },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "systemContextViews" : [ {
+      "dimensions" : {
+        "height" : 2000,
+        "width" : 2350
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 949,
+        "y" : 800
+      }, {
+        "id" : "2",
+        "x" : 1699,
+        "y" : 800
+      }, {
+        "id" : "3",
+        "x" : 960,
+        "y" : 50
+      }, {
+        "id" : "4",
+        "x" : 155,
+        "y" : 655
+      }, {
+        "id" : "5",
+        "x" : 970,
+        "y" : 1340
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "SISExamsDiagram",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "10"
+      }, {
+        "id" : "11"
+      }, {
+        "id" : "6",
+        "vertices" : [ {
+          "x" : 1380,
+          "y" : 590
+        } ]
+      }, {
+        "id" : "7",
+        "vertices" : [ {
+          "x" : 880,
+          "y" : 630
+        } ]
+      }, {
+        "id" : "8",
+        "vertices" : [ {
+          "x" : 796,
+          "y" : 1124
+        } ]
+      }, {
+        "id" : "9",
+        "vertices" : [ {
+          "x" : 776,
+          "y" : 825
+        } ]
+      } ],
+      "softwareSystemId" : "1"
+    } ]
+  }
+}

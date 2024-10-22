@@ -6,7 +6,7 @@ workspace "Name" "Description" {
         # SW Systems
         SISExams = softwareSystem "Zkoušky v rámci SIS" "Spravuje vytvareni zkousek, zapis studentu a monitoruje jejich vysledky"
 
-        SIS = softwareSystem "SIS" "Spravuje data veci, co se dejou na univerzite. Vcetne zkousek, predmetu a zapisu."
+        SIS = softwareSystem "SIS" "Spravuje data veci, co se dejou na univerzite. Vcetne zkousek, predmetu a zapisu." "Existing System"
 
         # actors
         ucitel = person "Učitel" "Vytvari terminy na zkousky a zapisuje hodnoceni"
@@ -27,31 +27,19 @@ workspace "Name" "Description" {
     views {
         systemContext SISExams "SISExamsDiagram" {
             include *
-            autolayout lr
         }
 
+        theme default
+
         styles {
-            element "Element" {
+            element "Existing System" {
+                background #999999
                 color #ffffff
             }
-            element "Person" {
-                background #9b191f
-                shape person
-            }
-            element "Software System" {
-                background #ba1e25
-            }
-            element "Container" {
-                background #d9232b
-            }
-                element "Database" {
+            element "Database" {
                 shape cylinder
             }
         }
-    }
-
-    configuration {
-        scope softwaresystem
     }
 
 }
