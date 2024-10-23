@@ -39,6 +39,11 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         student -> SISExams "Zapisuje si zkoušky"
         manazer -> SISExams "Čte statistiky"
 
+        ucitel -> TerminyUI "Vytváří a zobrazuje termíny"
+        ucitel -> ZnamkyUI "Zapisuje známky"
+        student -> ZnamkyUI "Čte výsledky zkoušek"
+        student -> TerminyUI "Zapisuje si zkoušky"
+
         # Relationships between SW Systems
         SISExams -> SIS "API na zistení a zápis dat"
 
