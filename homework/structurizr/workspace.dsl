@@ -3,17 +3,17 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
     model {
         # SW Systems
         SISExams = softwareSystem "Zkoušky v rámci SIS" "Spravuje vytvareni zkousek, zapis studentu a monitoruje jejich vysledky" {
-            TerminyUI = container "Termíny UI" "" "" "Web Front-End"
-            ZnamkyUI = container "Známky UI" "" "" "Web Front-End"
-            TerminyManager = container "Termíny Manager"
-            TerminyDB = container "TermínyDB" "" "" "Database"
-            KonfliktDetektor = container "Konflikt Detektor"
-            ZnamkyManager = container "Známky Manager"
-            ZnamkyDB = container "Známky DB" "" "" "Database"
-            Osoby = container "Osoby" "" "" "Existing System"
-            Predmety = container "Predmety" "" "" "Existing System"
-            Notifikator = container "Notifikator"
-            ExtNotif = container "Ext. notif." "" "" "Existing System"
+            TerminyUI = container "Termíny UI" "Zobrazí UI na termíny pre učitele a študenty" "" "Web Front-End"
+            ZnamkyUI = container "Známky UI" "Zobrazí UI na známky pre učitele a študenty" "" "Web Front-End"
+            TerminyManager = container "Termíny Manager" "Rieši veci okolo termínov (vnútorné členenie na minimálne čakačku a prihlasovanie); posiela notifikácie pri zmenách; komunikuje s DB"
+            TerminyDB = container "TermínyDB" "Ukladá info o termínoch, prihlásených studentech, čakajúcich studentech" "" "Database"
+            KonfliktDetektor = container "Konflikt Detektor" "Volá ho termíny manager, detekuje konflikty, reportuje stav termíny UI"
+            ZnamkyManager = container "Známky Manager" "Rieši veci okolo známok (zapisovanie, pozeranie, ...); posiela notifikácie pri zmenách; treba spojeni so známky managerom pre prípad, že termín vyžaduje zápočet; kounikuje s DB"
+            ZnamkyDB = container "Známky DB" "Ukladá hodnotenie št aj s históriou v rámci jedného predmetu" "" "Database"
+            Osoby = container "Osoby" "Externí modul pre osoby (extra info o nich, ...)" "" "Existing System"
+            Predmety = container "Predmety" "Externí modul pre predmety (aktuálne zapísané pre študenty, história, ...)" "" "Existing System"
+            Notifikator = container "Notifikator" "Vytvára notifikácie (po obsahovej stránke čiže nejaké templaty); emaily, notifikácie do UI; (umožnění učitelům upravit obsah => treba napojiť na UI)"
+            ExtNotif = container "Ext. notif." "Externí modul na notifikácie a centrálnym mail serverom systému" "" "Existing System"
         }
 
         SIS = softwareSystem "SIS" "Spravuje data veci, co se dejou na univerzite. Vcetne zkousek, predmetu a zapisu." "Existing System"
@@ -67,9 +67,11 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
                 color #ffffff
             }
             element "Database" {
+                background #8243d5
                 shape Cylinder
             }
             element "Web Front-End" {
+                background #8ad543
                 shape WebBrowser
             }
         }
