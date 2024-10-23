@@ -5,8 +5,15 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         SISExams = softwareSystem "Zkoušky v rámci SIS" "Spravuje vytvareni zkousek, zapis studentu a monitoruje jejich vysledky" {
             TerminyUI = container "Termíny UI" "Zobrazí UI na termíny pre učitele a študenty" "" "Web Front-End"
             ZnamkyUI = container "Známky UI" "Zobrazí UI na známky pre učitele a študenty" "" "Web Front-End"
-            TerminyManager = container "Termíny Manager" "Rieši veci okolo termínov (vnútorné členenie na minimálne čakačku a prihlasovanie); posiela notifikácie pri zmenách; komunikuje s DB"
-            TerminyDB = container "TermínyDB" "Ukladá info o termínoch, prihlásených studentech, čakajúcich studentech" "" "Database"
+            TerminyManager = container "Termíny Manager" "Rieši veci okolo termínov (vnútorné členenie na minimálne čakačku a prihlasovanie); posiela notifikácie pri zmenách; komunikuje s DB" {
+                CekaciListinaController = component "Čekací Listina Controller" "Príhlasenie na čakaciu listiny; Odhlásanie z čakacej listiny"
+                HlaseniNaTerminyController = component "Hlášení na termíny Controller" "Prihlásenie na termín; Odhlásenie z termínu"
+                TerminyDataController = component "Termíny Data Controller" "Vytvorenie termínu; Úprava termínu"
+            }
+            TerminyDB = container "TermínyDB" "Ukladá info o termínoch, prihlásených studentech, čakajúcich studentech" "" "Database" {
+                TerminyInfoSaver = component "Termíny Info Saver" "Ukladanie termínov; Uložiť prihlásenie na termín; Uložiť odhlásenie z termínu; Uložiť prihlásenie na čak. listinu; Uložiť odhlásenie z čak. listiny"
+                TerminyInfoProvider = component "Termíny Info Provider" "Poskytnúť informácie o termíne"
+            }
             KonfliktDetektor = container "Konflikt Detektor" "Volá ho termíny manager, detekuje konflikty, reportuje stav termíny UI"
             ZnamkyManager = container "Známky Manager" "Rieši veci okolo známok (zapisovanie, pozeranie, ...); posiela notifikácie pri zmenách; treba spojeni so známky managerom pre prípad, že termín vyžaduje zápočet; kounikuje s DB"
             ZnamkyDB = container "Známky DB" "Ukladá hodnotenie št aj s históriou v rámci jedného predmetu" "" "Database"
@@ -35,7 +42,7 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
 
         # Relationships inside SISExams
         TerminyUI -> TerminyManager
-        TerminyManager -> TerminyDB
+        TerminyManager -> TerminyDB "Ukladanie termínov"
         KonfliktDetektor -> TerminyUI
         KonfliktDetektor -> TerminyDB
         TerminyManager -> KonfliktDetektor
@@ -43,9 +50,10 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         TerminyUI -> Osoby
         TerminyUI -> Predmety
         ZnamkyUI -> ZnamkyManager
-        ZNamkyUI -> Osoby
+        ZNamkyUI -> Osoby "Zobraziť študentovi jeho hodnotenie"
+        ZNamkyUI -> Osoby "Zobrazit ucitelovi tabulku s hodnotenim studentov"
         ZnamkyUI -> Predmety
-        ZnamkyManager -> ZnamkyDB
+        ZnamkyManager -> ZnamkyDB "Zapísať / Zmeniť hodnotenie"
         ZnamkyManager -> Notifikator
         Notifikator -> ExtNotif
     }
@@ -56,6 +64,14 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         }
 
         container SISExams "SISExamsContainerDiagram" {
+            include *
+        }
+
+        component TerminyManager "TerminyManagerComponentDiagram" {
+            include *
+        }
+
+        component TerminyDB "TerminyDBComponentDiagram" {
             include *
         }
 
