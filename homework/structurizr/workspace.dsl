@@ -57,8 +57,8 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         TerminyUI -> Osoby
         TerminyUI -> Predmety
         ZnamkyUI -> ZnamkyManager
-        ZNamkyUI -> Osoby "Zobraziť študentovi jeho hodnotenie"
-        ZNamkyUI -> Osoby "Zobrazit ucitelovi tabulku s hodnotenim studentov"
+        ZnamkyUI -> Osoby "Zobraziť študentovi jeho hodnotenie"
+        ZnamkyUI -> Osoby "Zobrazit ucitelovi tabulku s hodnotenim studentov"
         ZnamkyUI -> Predmety
         ZnamkyManager -> ZnamkyDB "Zapísať / Zmeniť hodnotenie"
         ZnamkyManager -> Notifikator
