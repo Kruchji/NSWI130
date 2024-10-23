@@ -15,7 +15,9 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
                 TerminyInfoProvider = component "Termíny Info Provider" "Poskytnúť informácie o termíne"
             }
             KonfliktDetektor = container "Konflikt Detektor" "Volá ho termíny manager, detekuje konflikty, reportuje stav termíny UI"
-            ZnamkyManager = container "Známky Manager" "Rieši veci okolo známok (zapisovanie, pozeranie, ...); posiela notifikácie pri zmenách; treba spojeni so známky managerom pre prípad, že termín vyžaduje zápočet; kounikuje s DB"
+            ZnamkyManager = container "Známky Manager" "Rieši veci okolo známok (zapisovanie, pozeranie, ...); posiela notifikácie pri zmenách; treba spojeni so známky managerom pre prípad, že termín vyžaduje zápočet; komunikuje s DB" {
+                ZnamkyDataController = component "Známky Data Controller" "Čte a zapisuje známky, při změně žádá o notifikaci"
+                }
             ZnamkyDB = container "Známky DB" "Ukladá hodnotenie št aj s históriou v rámci jedného predmetu" "" "Database"
             Osoby = container "Osoby" "Externí modul pre osoby (extra info o nich, ...)" "" "Existing System"
             Predmety = container "Predmety" "Externí modul pre predmety (aktuálne zapísané pre študenty, história, ...)" "" "Existing System"
@@ -56,6 +58,11 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         ZnamkyManager -> ZnamkyDB "Zapísať / Zmeniť hodnotenie"
         ZnamkyManager -> Notifikator
         Notifikator -> ExtNotif
+        
+        # Relationships inside ZnamkyManager
+        ZnamkyDataController -> ZnamkyDB
+        ZnamkyDataController -> Notifikator
+
     }
 
     views {
@@ -72,6 +79,10 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         }
 
         component TerminyDB "TerminyDBComponentDiagram" {
+            include *
+        }
+
+        component ZnamkyManager "ZnamkyManagerComponentDiagram" {
             include *
         }
 
