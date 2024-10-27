@@ -28,7 +28,12 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             
             Osoby = container "Osoby" "Externí modul pre osoby (extra info o nich, ...)" "" "Existing System"
             Predmety = container "Predmety" "Externí modul pre predmety (aktuálne zapísané pre študenty, história, ...)" "" "Existing System"
-            Notifikator = container "Notifikator" "Vytvára notifikácie (po obsahovej stránke čiže nejaké templaty); emaily, notifikácie do UI; (umožnění učitelům upravit obsah => treba napojiť na UI)"
+            Notifikator = container "Notifikator" "Vytvára notifikácie (po obsahovej stránke čiže nejaké templaty); emaily, notifikácie do UI; (umožnění učitelům upravit obsah => treba napojiť na UI)" {
+                GeneratorObsahuSprav = component "Generátor obsahu správ" "Vytvorenie obsahu správy podla templatu"
+                TemplateManager = component "Template Manager" "Spravovanie a poskytovanie templatov pre notifikácie"
+                NotifikacieDispatcher = component "Notifikácie Dispatcher" "Komunikácia s externým modulom pre notifikácie"
+                NotifikacieController = component "Notifikácie Controller" "Komunikuju s ním Terminy Manager a Znamky Manager; Spúšťa tvorbu notifikácie"
+            }            
             ExtNotif = container "Ext. notif." "Externí modul na notifikácie a centrálnym mail serverom systému" "" "Existing System"
         }
 
@@ -60,20 +65,32 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         KonfliktDetektor -> TerminyUI
         KonfliktDetektor -> TerminyDB
         TerminyManager -> KonfliktDetektor
-        TerminyManager -> Notifikator
+        TerminyManager -> Notifikator "Pri zmene/pridani terminu žiada o poslanie notifikacie"
         TerminyUI -> Osoby
         TerminyUI -> Predmety
-        ZnamkyUI -> ZnamkyManager
+        ZnamkyUI -> ZnamkyManager "Pri zmene známky žiada o poslanie notifikacie"
         ZnamkyUI -> Osoby "Zobraziť študentovi jeho hodnotenie"
         ZnamkyUI -> Osoby "Zobrazit ucitelovi tabulku s hodnotenim studentov"
         ZnamkyUI -> Predmety
         ZnamkyManager -> ZnamkyDB "Zapísať / Zmeniť hodnotenie"
+        Notifikator -> Osoby "Získanie e-mailových adries"
         ZnamkyManager -> Notifikator
         Notifikator -> ExtNotif
         
         # Relationships inside ZnamkyManager
         ZnamkyDataController -> ZnamkyDB
         ZnamkyDataController -> Notifikator
+
+        #Relationships inside Notifikator
+        NotifikacieController -> Osoby "Získanie e-mailových adries"
+        TerminyManager -> NotifikacieController "Posiela žiadosť o notifikáciu"
+        ZnamkyManager -> NotifikacieController "Posiela žiadosť o notifikáciu"
+        TemplateManager -> GeneratorObsahuSprav "Načítá šablóny pre generaciu obsahu"
+        GeneratorObsahuSprav -> NotifikacieDispatcher "Poskytne obsah správy na poslanie"
+        NotifikacieController -> TemplateManager "Požiada o použitie daného templatu pre správu"
+        NotifikacieController -> NotifikacieDispatcher "Poskytne získanú adresu z Osoby modulu"
+        NotifikacieController -> GeneratorObsahuSprav "Poskytne info o termine/znamke ktoré sú obsahom správy"
+        NotifikacieDispatcher -> ExtNotif "Poskytuje všetky info na na odoslanie notifikacie"
 
     }
 
@@ -95,6 +112,10 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         }
 
         component ZnamkyManager "ZnamkyManagerComponentDiagram" {
+            include *
+        }
+
+        component Notifikator "NotifikatorComponentDiagram" {
             include *
         }
 
