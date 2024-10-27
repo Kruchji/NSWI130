@@ -92,6 +92,14 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         NotifikacieController -> GeneratorObsahuSprav "Poskytne info o termine/znamke ktoré sú obsahom správy"
         NotifikacieDispatcher -> ExtNotif "Poskytuje všetky info na na odoslanie notifikacie"
 
+        #Relationships inside TerminyManager
+        TerminyDataController -> Notifikator "Žiada o zaslanie notifikacie o termine"
+        TerminyDataController -> TerminyDB "Ukladá termíny; Získava info o termínoch"
+        TerminyDataController -> KonfliktDetektor "Volá ohľadom kontroly termínu"
+        TerminyUI -> TerminyDataController "Žiada data o termínoch"
+        HlaseniNaTerminyController -> TerminyDB "Ukladá info o prihásených studentoch"
+        CekaciListinaController -> TerminyDB "Ukladá info o studentoch na čakacej listine"
+
     }
 
     views {
