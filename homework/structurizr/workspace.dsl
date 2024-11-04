@@ -7,23 +7,28 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             Group "Termíny zkoušek" {
                 TerminyUI = container "Termíny UI" "Zobrazí UI na termíny pre učitele a študenty" "" "Web Front-End"
                 TerminyManager = container "Termíny Manager" "Rieši veci okolo termínov (vnútorné členenie na minimálne čakačku a prihlasovanie); posiela notifikácie pri zmenách; komunikuje s DB" {
-                    CekaciListinaController = component "Čekací Listina Controller" "Príhlasenie na čakaciu listiny; Odhlásanie z čakacej listiny"
+                    CekaciListinaController = component "Čekací Listina Controller" "Prihlásenie na čakaciu listiny; Odhlásanie z čakacej listiny"
                     HlaseniNaTerminyController = component "Hlášení na termíny Controller" "Prihlásenie na termín; Odhlásenie z termínu"
                     TerminyDataController = component "Termíny Data Controller" "Vytvorenie termínu; Úprava termínu"
+                    TerminyDBController = component "Termíny DB Controller" "Komunikácia s databázou na termíny"
+                    TerminySyncer = component "Synchronizácia termínov" "Posiela informácie o zmenách v termínoch pre použitie v ZnamkyDB"
                 }
-                TerminyDB = container "TermínyDB" "Ukladá info o termínoch, prihlásených studentech, čakajúcich studentech" "" "Database" {
-                    TerminyInfoSaver = component "Termíny Info Saver" "Ukladanie termínov; Uložiť prihlásenie na termín; Uložiť odhlásenie z termínu; Uložiť prihlásenie na čak. listinu; Uložiť odhlásenie z čak. listiny"
-                    TerminyInfoProvider = component "Termíny Info Provider" "Poskytnúť informácie o termíne"
+                TerminyDB = container "TermínyDB" "Ukladá info o termínoch, prihlásených studentech, čakajúcich studentech" "" "Database"
+                KonfliktDetektor = container "Konflikt Detektor" "Volá ho termíny manager, detekuje konflikty, reportuje stav termíny UI" {
+                    KonfliktDetektorDBController = component "DB Controller" "Získava informácie o termínoch z databázi"
+                    KonfliktDetektorFinder = component "Hľadač konfliktov" "Hľadá konflikty v termínoch"
+                    KonfliktDetektorReporter = component "Reporter konfliktov" "Komunikuje s notifikátorom o výsledkoch"
                 }
-                KonfliktDetektor = container "Konflikt Detektor" "Volá ho termíny manager, detekuje konflikty, reportuje stav termíny UI"
             }
             
             Group "Známkování" {
                 ZnamkyUI = container "Známky UI" "Zobrazí UI na známky pre učitele a študenty" "" "Web Front-End"
                 ZnamkyManager = container "Známky Manager" "Rieši veci okolo známok (zapisovanie, pozeranie, ...); posiela notifikácie pri zmenách; treba spojeni so známky managerom pre prípad, že termín vyžaduje zápočet; komunikuje s DB" {
                     ZnamkyDataController = component "Známky Data Controller" "Čte a zapisuje známky, při změně žádá o notifikaci"
+                    ZnamkyDBController = component "Známky DB Controller" "Komunikácia s databázou na známky"
+                    ZnamkySyncer = component "Synchronizuje termíny" "Vytvára nové termíny v DB, ukladá informácie o prihlásených termínoch študenta"
                 }
-                ZnamkyDB = container "Známky DB" "Ukladá hodnotenie št aj s históriou v rámci jedného predmetu" "" "Database"
+                ZnamkyDB = container "Známky DB" "Ukladá hodnotenie študenta aj s históriou v rámci jedného predmetu" "" "Database"
             }
             
             Osoby = container "Osoby" "Externí modul pre osoby (extra info o nich, ...)" "" "Existing System"
@@ -62,9 +67,9 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         # Relationships inside SISExams
         TerminyUI -> TerminyManager
         TerminyManager -> TerminyDB "Ukladanie termínov"
-        KonfliktDetektor -> TerminyUI
-        KonfliktDetektor -> TerminyDB
-        TerminyManager -> KonfliktDetektor
+        KonfliktDetektor -> TerminyUI "Posiela výsledky detekcie konfliktov"
+        KonfliktDetektor -> TerminyDB "Číta informácie o termínoch"
+        TerminyManager -> KonfliktDetektor "Volá detekciu konfliktov"
         TerminyManager -> Notifikator "Pri zmene/pridani terminu žiada o poslanie notifikacie"
         TerminyUI -> Osoby
         TerminyUI -> Predmety
@@ -73,16 +78,19 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         ZnamkyUI -> Osoby "Zobrazit ucitelovi tabulku s hodnotenim studentov"
         ZnamkyUI -> Predmety
         ZnamkyManager -> ZnamkyDB "Zapísať / Zmeniť hodnotenie"
-        Notifikator -> Osoby "Získanie e-mailových adries"
-        ZnamkyManager -> Notifikator
-        Notifikator -> ExtNotif
-        
+        ZnamkyManager -> Notifikator "Posiela notifikácie pri zmene známky"
+        Notifikator -> ExtNotif "Posiela hotové notifikácie na odoslanie"
+        TerminyManager -> ZnamkyManager "Synchronizuje termíny medzi DB"
+
         # Relationships inside ZnamkyManager
-        ZnamkyDataController -> ZnamkyDB
-        ZnamkyDataController -> Notifikator
+        ZnamkyDataController -> ZnamkyDBController "Ukladá známky / Získava známky"
+        ZnamkyDataController -> Notifikator "Posiela žiadosť o notifikáciu"
+        ZnamkyDBController -> ZnamkyDB "Ukladá zmeny do databáze / číta DB"
+        ZnamkyUI -> ZnamkyDataController "Posiela žiadosti o zmenu známky / získava informácie o známkach"
+        TerminyManager -> ZnamkySyncer "Príjma informácie z termínov"
+        ZnamkySyncer -> ZnamkyDB "Ukladá dáta do DB"
 
         #Relationships inside Notifikator
-        NotifikacieController -> Osoby "Získanie e-mailových adries"
         TerminyManager -> NotifikacieController "Posiela žiadosť o notifikáciu"
         ZnamkyManager -> NotifikacieController "Posiela žiadosť o notifikáciu"
         TemplateManager -> GeneratorObsahuSprav "Načítá šablóny pre generaciu obsahu"
@@ -94,12 +102,22 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
 
         #Relationships inside TerminyManager
         TerminyDataController -> Notifikator "Žiada o zaslanie notifikacie o termine"
-        TerminyDataController -> TerminyDB "Ukladá termíny; Získava info o termínoch"
+        TerminyDataController -> TerminyDBController "Ukladá termíny; Získava info o termínoch"
         TerminyDataController -> KonfliktDetektor "Volá ohľadom kontroly termínu"
-        TerminyUI -> TerminyDataController "Žiada data o termínoch"
-        HlaseniNaTerminyController -> TerminyDB "Ukladá info o prihásených studentoch"
-        CekaciListinaController -> TerminyDB "Ukladá info o studentoch na čakacej listine"
+        TerminyUI -> TerminyDataController "Posiela žiadosti na nový termín / prihlásenie/odhlásenie žiaka / Žiada data o termínoch"
+        HlaseniNaTerminyController -> TerminyDBController "Ukladá info o prihásených studentoch"
+        CekaciListinaController -> TerminyDBController "Ukladá info o studentoch na čakacej listine"
+        TerminyDBController -> TerminyDB "Ukladá zmeny do databáze / číta DB"
+        TerminyDataController -> TerminySyncer "Posiela nové termíny"
+        HlaseniNaTerminyController -> TerminySyncer "Posiela informácie o prihlásených/odhlásených študentoch"
+        TerminySyncer -> ZnamkyManager "Posiela informácia pri vytvorení nových termínov a prihlásení/odhlásení študentov"
 
+        # Relationships inside KonfliktDetektor
+        TerminyManager -> KonfliktDetektorFinder "Volá hľadanie konfliktov"
+        KonfliktDetektorFinder -> KonfliktDetektorDBController "Získava dáta o termínoch"
+        KonfliktDetektorDBController -> TerminyDB "Číta dáta o termínoch z DB"
+        KonfliktDetektorFinder -> KonfliktDetektorReporter "Posiela výsledky hľadania konfliktov"
+        KonfliktDetektorReporter -> TerminyUI "Posiela výsledky detekcie konfliktov"
     }
 
     views {
@@ -113,18 +131,24 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
 
         component TerminyManager "TerminyManagerComponentDiagram" {
             include *
-        }
-
-        component TerminyDB "TerminyDBComponentDiagram" {
-            include *
+            exclude ZnamkyManager->*
+            exclude KonfliktDetektor->*
         }
 
         component ZnamkyManager "ZnamkyManagerComponentDiagram" {
             include *
+            exclude TerminyManager->Notifikator
         }
 
         component Notifikator "NotifikatorComponentDiagram" {
             include *
+            exclude TerminyManager->ZnamkyManager
+        }
+
+        component KonfliktDetektor "KonfliktDetektorComponentDiagram" {
+            include *
+            exclude TerminyUI->TerminyManager
+            exclude TerminyManager->TerminyDB
         }
 
         theme default

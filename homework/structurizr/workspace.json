@@ -4,11 +4,11 @@
   "documentation" : { },
   "id" : 1,
   "lastModifiedAgent" : "structurizr-ui",
-  "lastModifiedDate" : "2024-10-23T11:05:45Z",
+  "lastModifiedDate" : "2024-11-04T18:39:50Z",
   "model" : {
     "people" : [ {
       "description" : "Vytvari terminy na zkousky a zapisuje hodnoceni",
-      "id" : "20",
+      "id" : "29",
       "location" : "Unspecified",
       "name" : "Učitel",
       "properties" : {
@@ -17,44 +17,44 @@
       "relationships" : [ {
         "description" : "Zobrazení termínu",
         "destinationId" : "1",
-        "id" : "23",
+        "id" : "32",
         "properties" : {
-          "structurizr.dsl.identifier" : "5736f0c6-5267-4bbc-a3e7-3465bf17c34a"
+          "structurizr.dsl.identifier" : "c7c78777-d72b-47bd-a108-da1fecb2098a"
         },
-        "sourceId" : "20",
+        "sourceId" : "29",
         "tags" : "Relationship"
       }, {
         "description" : "Vytvari terminy a zapisuje znamky",
         "destinationId" : "1",
-        "id" : "24",
+        "id" : "33",
         "properties" : {
-          "structurizr.dsl.identifier" : "19f9beb0-5d5c-4c5a-bb1a-690dae3547c6"
+          "structurizr.dsl.identifier" : "c45343fd-b786-48a0-8263-c6d3c1485749"
         },
-        "sourceId" : "20",
+        "sourceId" : "29",
         "tags" : "Relationship"
       }, {
         "description" : "Vytváří a zobrazuje termíny",
         "destinationId" : "2",
-        "id" : "28",
+        "id" : "37",
         "properties" : {
-          "structurizr.dsl.identifier" : "0ad973ec-b030-45e6-9207-3e53d4534789"
+          "structurizr.dsl.identifier" : "9b60bac2-4eff-4504-8305-d4d91d079bff"
         },
-        "sourceId" : "20",
+        "sourceId" : "29",
         "tags" : "Relationship"
       }, {
         "description" : "Zapisuje známky",
-        "destinationId" : "11",
-        "id" : "29",
+        "destinationId" : "14",
+        "id" : "38",
         "properties" : {
-          "structurizr.dsl.identifier" : "8db30500-5995-4841-9f19-7d93f4dd0e74"
+          "structurizr.dsl.identifier" : "16537527-788d-4e1c-963d-d14ccee33176"
         },
-        "sourceId" : "20",
+        "sourceId" : "29",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Person"
     }, {
       "description" : "Zapisuje si terminy zkousek a diva se jak dopadli",
-      "id" : "21",
+      "id" : "30",
       "location" : "Unspecified",
       "name" : "Student",
       "properties" : {
@@ -63,44 +63,44 @@
       "relationships" : [ {
         "description" : "Čte výsledky zkoušek",
         "destinationId" : "1",
-        "id" : "25",
+        "id" : "34",
         "properties" : {
-          "structurizr.dsl.identifier" : "e377f755-072c-49b1-83a8-8180b6d6cc87"
+          "structurizr.dsl.identifier" : "55316372-8375-4f3c-9800-5e58db7c5169"
         },
-        "sourceId" : "21",
+        "sourceId" : "30",
         "tags" : "Relationship"
       }, {
         "description" : "Zapisuje si zkoušky",
         "destinationId" : "1",
-        "id" : "26",
+        "id" : "35",
         "properties" : {
-          "structurizr.dsl.identifier" : "d23f3a1f-4d04-46f0-8e46-318ebf5bf8bd"
+          "structurizr.dsl.identifier" : "b2d143fc-3550-4521-bd8e-801b9c0ff6b2"
         },
-        "sourceId" : "21",
+        "sourceId" : "30",
         "tags" : "Relationship"
       }, {
         "description" : "Čte výsledky zkoušek",
-        "destinationId" : "11",
-        "id" : "30",
+        "destinationId" : "14",
+        "id" : "39",
         "properties" : {
-          "structurizr.dsl.identifier" : "5ed0f46c-407c-4355-a72e-28905e023904"
+          "structurizr.dsl.identifier" : "606fcacb-f874-49b2-b883-965441187e4a"
         },
-        "sourceId" : "21",
+        "sourceId" : "30",
         "tags" : "Relationship"
       }, {
         "description" : "Zapisuje si zkoušky",
         "destinationId" : "2",
-        "id" : "31",
+        "id" : "40",
         "properties" : {
-          "structurizr.dsl.identifier" : "a994a112-0fcb-4e7b-9b14-b5d26be27d6e"
+          "structurizr.dsl.identifier" : "19b86e85-91d8-44bd-808a-6bfb3176afda"
         },
-        "sourceId" : "21",
+        "sourceId" : "30",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Person"
     }, {
       "description" : "Dela statistiky a spravuje vyucujici",
-      "id" : "22",
+      "id" : "31",
       "location" : "Unspecified",
       "name" : "Manažer",
       "properties" : {
@@ -109,11 +109,11 @@
       "relationships" : [ {
         "description" : "Čte statistiky",
         "destinationId" : "1",
-        "id" : "27",
+        "id" : "36",
         "properties" : {
-          "structurizr.dsl.identifier" : "ab622804-2506-4474-818f-1c7bf58b038d"
+          "structurizr.dsl.identifier" : "8a07aa8e-9317-413e-ae09-8101a8ac66b9"
         },
-        "sourceId" : "22",
+        "sourceId" : "31",
         "tags" : "Relationship"
       } ],
       "tags" : "Element,Person"
@@ -130,25 +130,34 @@
         },
         "relationships" : [ {
           "destinationId" : "3",
-          "id" : "33",
+          "id" : "42",
           "properties" : {
-            "structurizr.dsl.identifier" : "3762f3a5-30db-4013-81ed-3739fe580d4a"
+            "structurizr.dsl.identifier" : "6190da56-33bf-4a13-b7ff-cfcc40d17b57"
           },
           "sourceId" : "2",
           "tags" : "Relationship"
         }, {
-          "destinationId" : "15",
-          "id" : "39",
+          "destinationId" : "20",
+          "id" : "48",
           "properties" : {
-            "structurizr.dsl.identifier" : "0a72ca44-b463-4997-a170-00242fc9a3b7"
+            "structurizr.dsl.identifier" : "5f843401-4a37-4a31-9a50-b57ae20fd95b"
           },
           "sourceId" : "2",
           "tags" : "Relationship"
         }, {
-          "destinationId" : "16",
-          "id" : "40",
+          "destinationId" : "21",
+          "id" : "49",
           "properties" : {
-            "structurizr.dsl.identifier" : "26b0d39b-dd88-4420-bf40-8856bdccbc73"
+            "structurizr.dsl.identifier" : "516fd9d4-1a2a-4e7d-84e4-222198a53549"
+          },
+          "sourceId" : "2",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Posiela žiadosti na nový termín / prihlásenie/odhlásenie žiaka / Žiada data o termínoch",
+          "destinationId" : "6",
+          "id" : "75",
+          "properties" : {
+            "structurizr.dsl.identifier" : "bed42ce4-0529-4836-900a-11335763c20d"
           },
           "sourceId" : "2",
           "tags" : "Relationship"
@@ -156,13 +165,23 @@
         "tags" : "Element,Container,Web Front-End"
       }, {
         "components" : [ {
-          "description" : "Príhlasenie na čakaciu listiny; Odhlásanie z čakacej listiny",
+          "description" : "Prihlásenie na čakaciu listiny; Odhlásanie z čakacej listiny",
           "documentation" : { },
           "id" : "4",
           "name" : "Čekací Listina Controller",
           "properties" : {
             "structurizr.dsl.identifier" : "cekacilistinacontroller"
           },
+          "relationships" : [ {
+            "description" : "Ukladá info o studentoch na čakacej listine",
+            "destinationId" : "7",
+            "id" : "77",
+            "properties" : {
+              "structurizr.dsl.identifier" : "1d997431-5408-476f-9573-48212a69f353"
+            },
+            "sourceId" : "4",
+            "tags" : "Relationship"
+          } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Prihlásenie na termín; Odhlásenie z termínu",
@@ -172,6 +191,25 @@
           "properties" : {
             "structurizr.dsl.identifier" : "hlaseninaterminycontroller"
           },
+          "relationships" : [ {
+            "description" : "Ukladá info o prihásených studentoch",
+            "destinationId" : "7",
+            "id" : "76",
+            "properties" : {
+              "structurizr.dsl.identifier" : "2d0dcf65-d5a4-4c71-bb50-7d17aa9b9b9c"
+            },
+            "sourceId" : "5",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Posiela informácie o prihlásených/odhlásených študentoch",
+            "destinationId" : "8",
+            "id" : "80",
+            "properties" : {
+              "structurizr.dsl.identifier" : "7348e954-403e-4357-9406-170d66625d71"
+            },
+            "sourceId" : "5",
+            "tags" : "Relationship"
+          } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Vytvorenie termínu; Úprava termínu",
@@ -181,6 +219,81 @@
           "properties" : {
             "structurizr.dsl.identifier" : "terminydatacontroller"
           },
+          "relationships" : [ {
+            "description" : "Žiada o zaslanie notifikacie o termine",
+            "destinationId" : "22",
+            "id" : "72",
+            "properties" : {
+              "structurizr.dsl.identifier" : "6d1a752c-f4c3-4d76-a9b4-fcd80a6eaf19"
+            },
+            "sourceId" : "6",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Ukladá termíny; Získava info o termínoch",
+            "destinationId" : "7",
+            "id" : "73",
+            "properties" : {
+              "structurizr.dsl.identifier" : "4b7eaae7-4724-40f7-a51d-ef4fcba87bc8"
+            },
+            "sourceId" : "6",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Volá ohľadom kontroly termínu",
+            "destinationId" : "10",
+            "id" : "74",
+            "properties" : {
+              "structurizr.dsl.identifier" : "ce390507-8693-4070-ac00-6ca88c76dd28"
+            },
+            "sourceId" : "6",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Posiela nové termíny",
+            "destinationId" : "8",
+            "id" : "79",
+            "properties" : {
+              "structurizr.dsl.identifier" : "a4b13548-460e-41e5-8073-6ccb34c26632"
+            },
+            "sourceId" : "6",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Komunikácia s databázou na termíny",
+          "documentation" : { },
+          "id" : "7",
+          "name" : "Termíny DB Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "terminydbcontroller"
+          },
+          "relationships" : [ {
+            "description" : "Ukladá zmeny do databáze / číta DB",
+            "destinationId" : "9",
+            "id" : "78",
+            "properties" : {
+              "structurizr.dsl.identifier" : "93f28ede-310c-4581-a19d-23ebbaabf971"
+            },
+            "sourceId" : "7",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Posiela informácie o zmenách v termínoch pre použitie v ZnamkyDB",
+          "documentation" : { },
+          "id" : "8",
+          "name" : "Synchronizácia termínov",
+          "properties" : {
+            "structurizr.dsl.identifier" : "terminysyncer"
+          },
+          "relationships" : [ {
+            "description" : "Posiela informácia pri vytvorení nových termínov a prihlásení/odhlásení študentov",
+            "destinationId" : "15",
+            "id" : "81",
+            "properties" : {
+              "structurizr.dsl.identifier" : "9fed92e7-c029-4728-8fe5-da2cb749250a"
+            },
+            "sourceId" : "8",
+            "tags" : "Relationship"
+          } ],
           "tags" : "Element,Component"
         } ],
         "description" : "Rieši veci okolo termínov (vnútorné členenie na minimálne čakačku a prihlasovanie); posiela notifikácie pri zmenách; komunikuje s DB",
@@ -193,61 +306,147 @@
         },
         "relationships" : [ {
           "description" : "Ukladanie termínov",
-          "destinationId" : "7",
-          "id" : "34",
+          "destinationId" : "9",
+          "id" : "43",
           "properties" : {
-            "structurizr.dsl.identifier" : "c733d9e4-ca67-4434-892e-f3f3517c95ea"
+            "structurizr.dsl.identifier" : "080b6769-b191-4889-a23f-e0da7ed33918"
           },
           "sourceId" : "3",
           "tags" : "Relationship"
         }, {
+          "description" : "Volá detekciu konfliktov",
           "destinationId" : "10",
-          "id" : "37",
+          "id" : "46",
           "properties" : {
-            "structurizr.dsl.identifier" : "96cebc00-ad0b-4ce5-a60e-c88d94a60138"
+            "structurizr.dsl.identifier" : "a13c1b59-8673-4b34-aa00-562007a835b7"
           },
           "sourceId" : "3",
           "tags" : "Relationship"
         }, {
-          "destinationId" : "17",
-          "id" : "38",
+          "description" : "Pri zmene/pridani terminu žiada o poslanie notifikacie",
+          "destinationId" : "22",
+          "id" : "47",
           "properties" : {
-            "structurizr.dsl.identifier" : "65fe1d00-c0f7-4b6c-816e-65c5dff99b15"
+            "structurizr.dsl.identifier" : "01cfe59d-6316-49d1-a47a-50a7514bd07d"
+          },
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Synchronizuje termíny medzi DB",
+          "destinationId" : "15",
+          "id" : "57",
+          "properties" : {
+            "structurizr.dsl.identifier" : "d792d0dd-2440-47e6-945d-bea5d6833384"
+          },
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Príjma informácie z termínov",
+          "destinationId" : "18",
+          "id" : "62",
+          "properties" : {
+            "structurizr.dsl.identifier" : "f1fb6a1a-9ffe-458a-b2c7-8ef9ded394bc"
+          },
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Posiela žiadosť o notifikáciu",
+          "destinationId" : "26",
+          "id" : "64",
+          "properties" : {
+            "structurizr.dsl.identifier" : "3a9c10a9-517c-4d7c-b77f-c0083415cd89"
+          },
+          "sourceId" : "3",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Volá hľadanie konfliktov",
+          "destinationId" : "12",
+          "id" : "82",
+          "properties" : {
+            "structurizr.dsl.identifier" : "49b7d234-7eeb-4bcd-8c0b-2baae0f4b7eb"
           },
           "sourceId" : "3",
           "tags" : "Relationship"
         } ],
         "tags" : "Element,Container"
       }, {
-        "components" : [ {
-          "description" : "Ukladanie termínov; Uložiť prihlásenie na termín; Uložiť odhlásenie z termínu; Uložiť prihlásenie na čak. listinu; Uložiť odhlásenie z čak. listiny",
-          "documentation" : { },
-          "id" : "8",
-          "name" : "Termíny Info Saver",
-          "properties" : {
-            "structurizr.dsl.identifier" : "terminyinfosaver"
-          },
-          "tags" : "Element,Component"
-        }, {
-          "description" : "Poskytnúť informácie o termíne",
-          "documentation" : { },
-          "id" : "9",
-          "name" : "Termíny Info Provider",
-          "properties" : {
-            "structurizr.dsl.identifier" : "terminyinfoprovider"
-          },
-          "tags" : "Element,Component"
-        } ],
         "description" : "Ukladá info o termínoch, prihlásených studentech, čakajúcich studentech",
         "documentation" : { },
         "group" : "Termíny zkoušek",
-        "id" : "7",
+        "id" : "9",
         "name" : "TermínyDB",
         "properties" : {
           "structurizr.dsl.identifier" : "terminydb"
         },
         "tags" : "Element,Container,Database"
       }, {
+        "components" : [ {
+          "description" : "Získava informácie o termínoch z databázi",
+          "documentation" : { },
+          "id" : "11",
+          "name" : "DB Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "konfliktdetektordbcontroller"
+          },
+          "relationships" : [ {
+            "description" : "Číta dáta o termínoch z DB",
+            "destinationId" : "9",
+            "id" : "84",
+            "properties" : {
+              "structurizr.dsl.identifier" : "4c17e932-5dd1-43d9-aa05-ab489bc51470"
+            },
+            "sourceId" : "11",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Hľadá konflikty v termínoch",
+          "documentation" : { },
+          "id" : "12",
+          "name" : "Hľadač konfliktov",
+          "properties" : {
+            "structurizr.dsl.identifier" : "konfliktdetektorfinder"
+          },
+          "relationships" : [ {
+            "description" : "Získava dáta o termínoch",
+            "destinationId" : "11",
+            "id" : "83",
+            "properties" : {
+              "structurizr.dsl.identifier" : "02b5f389-21f9-42a0-a921-3f9f5f638e14"
+            },
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Posiela výsledky hľadania konfliktov",
+            "destinationId" : "13",
+            "id" : "85",
+            "properties" : {
+              "structurizr.dsl.identifier" : "8f43ac9a-af31-4b7e-9517-4742d0965f61"
+            },
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Komunikuje s notifikátorom o výsledkoch",
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Reporter konfliktov",
+          "properties" : {
+            "structurizr.dsl.identifier" : "konfliktdetektorreporter"
+          },
+          "relationships" : [ {
+            "description" : "Posiela výsledky detekcie konfliktov",
+            "destinationId" : "2",
+            "id" : "86",
+            "properties" : {
+              "structurizr.dsl.identifier" : "a8bf484a-946e-4268-9238-876afd686eb5"
+            },
+            "sourceId" : "13",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
         "description" : "Volá ho termíny manager, detekuje konflikty, reportuje stav termíny UI",
         "documentation" : { },
         "group" : "Termíny zkoušek",
@@ -257,18 +456,20 @@
           "structurizr.dsl.identifier" : "konfliktdetektor"
         },
         "relationships" : [ {
+          "description" : "Posiela výsledky detekcie konfliktov",
           "destinationId" : "2",
-          "id" : "35",
+          "id" : "44",
           "properties" : {
-            "structurizr.dsl.identifier" : "d8e4e267-b232-424b-8894-91a2ba21b428"
+            "structurizr.dsl.identifier" : "ab3b0f33-a7ab-4f1b-8b34-2fb0af41ce3d"
           },
           "sourceId" : "10",
           "tags" : "Relationship"
         }, {
-          "destinationId" : "7",
-          "id" : "36",
+          "description" : "Číta informácie o termínoch",
+          "destinationId" : "9",
+          "id" : "45",
           "properties" : {
-            "structurizr.dsl.identifier" : "9729ffbe-4865-4b0c-9e24-87e2f107fbe8"
+            "structurizr.dsl.identifier" : "6c17717f-6fcc-4859-b8fb-bd843424997b"
           },
           "sourceId" : "10",
           "tags" : "Relationship"
@@ -278,44 +479,54 @@
         "description" : "Zobrazí UI na známky pre učitele a študenty",
         "documentation" : { },
         "group" : "Známkování",
-        "id" : "11",
+        "id" : "14",
         "name" : "Známky UI",
         "properties" : {
           "structurizr.dsl.identifier" : "znamkyui"
         },
         "relationships" : [ {
-          "destinationId" : "12",
-          "id" : "41",
+          "description" : "Pri zmene známky žiada o poslanie notifikacie",
+          "destinationId" : "15",
+          "id" : "50",
           "properties" : {
-            "structurizr.dsl.identifier" : "37b69fd0-440b-4ea3-b1eb-a2f2e9be7c38"
+            "structurizr.dsl.identifier" : "7e2cf48d-8c05-44a9-b4e1-3dc277164a8c"
           },
-          "sourceId" : "11",
+          "sourceId" : "14",
           "tags" : "Relationship"
         }, {
           "description" : "Zobraziť študentovi jeho hodnotenie",
-          "destinationId" : "15",
-          "id" : "42",
+          "destinationId" : "20",
+          "id" : "51",
           "properties" : {
-            "structurizr.dsl.identifier" : "49367835-3d78-40c1-a236-514c04015de5"
+            "structurizr.dsl.identifier" : "16ca1682-9588-4e85-b6a0-b93d4ab268ba"
           },
-          "sourceId" : "11",
+          "sourceId" : "14",
           "tags" : "Relationship"
         }, {
           "description" : "Zobrazit ucitelovi tabulku s hodnotenim studentov",
-          "destinationId" : "15",
-          "id" : "43",
+          "destinationId" : "20",
+          "id" : "52",
           "properties" : {
-            "structurizr.dsl.identifier" : "8781a1a6-8394-442b-acc0-4ed71ac94feb"
+            "structurizr.dsl.identifier" : "26a821f7-ff38-48a8-898a-02f114522707"
           },
-          "sourceId" : "11",
+          "sourceId" : "14",
           "tags" : "Relationship"
         }, {
-          "destinationId" : "16",
-          "id" : "44",
+          "destinationId" : "21",
+          "id" : "53",
           "properties" : {
-            "structurizr.dsl.identifier" : "bc8f13c6-182d-41dd-b8b2-30e63f7dd61c"
+            "structurizr.dsl.identifier" : "f7ab7589-78d5-4404-b8e2-e97993eb1d7d"
           },
-          "sourceId" : "11",
+          "sourceId" : "14",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Posiela žiadosti o zmenu známky / získava informácie o známkach",
+          "destinationId" : "16",
+          "id" : "61",
+          "properties" : {
+            "structurizr.dsl.identifier" : "aebdb5cb-b274-4b70-bc96-da005f2cb0ae"
+          },
+          "sourceId" : "14",
           "tags" : "Relationship"
         } ],
         "tags" : "Element,Container,Web Front-End"
@@ -323,26 +534,66 @@
         "components" : [ {
           "description" : "Čte a zapisuje známky, při změně žádá o notifikaci",
           "documentation" : { },
-          "id" : "13",
+          "id" : "16",
           "name" : "Známky Data Controller",
           "properties" : {
             "structurizr.dsl.identifier" : "znamkydatacontroller"
           },
           "relationships" : [ {
-            "destinationId" : "14",
-            "id" : "48",
+            "description" : "Ukladá známky / Získava známky",
+            "destinationId" : "17",
+            "id" : "58",
             "properties" : {
-              "structurizr.dsl.identifier" : "f5b9f786-1f5e-485e-baf4-aa1ab512b4d2"
+              "structurizr.dsl.identifier" : "8f4f5aae-79fd-45fe-b940-7cfd9d872599"
             },
-            "sourceId" : "13",
+            "sourceId" : "16",
             "tags" : "Relationship"
           }, {
-            "destinationId" : "17",
-            "id" : "49",
+            "description" : "Posiela žiadosť o notifikáciu",
+            "destinationId" : "22",
+            "id" : "59",
             "properties" : {
-              "structurizr.dsl.identifier" : "dc7dc64d-e7e5-4a43-8289-6bfdb87c41cf"
+              "structurizr.dsl.identifier" : "2a36b3a8-6c95-4b47-b055-bd8849b74489"
             },
-            "sourceId" : "13",
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Komunikácia s databázou na známky",
+          "documentation" : { },
+          "id" : "17",
+          "name" : "Známky DB Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "znamkydbcontroller"
+          },
+          "relationships" : [ {
+            "description" : "Ukladá zmeny do databáze / číta DB",
+            "destinationId" : "19",
+            "id" : "60",
+            "properties" : {
+              "structurizr.dsl.identifier" : "efccd480-5239-4cfe-9b03-03656ec6f5f0"
+            },
+            "sourceId" : "17",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Vytvára nové termíny v DB, ukladá informácie o prihlásených termínoch študenta",
+          "documentation" : { },
+          "id" : "18",
+          "name" : "Synchronizuje termíny",
+          "properties" : {
+            "structurizr.dsl.identifier" : "znamkysyncer"
+          },
+          "relationships" : [ {
+            "description" : "Ukladá dáta do DB",
+            "destinationId" : "19",
+            "id" : "63",
+            "properties" : {
+              "structurizr.dsl.identifier" : "a8cddd1b-ea5c-4614-acf3-478c11dc1009"
+            },
+            "sourceId" : "18",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
@@ -350,35 +601,45 @@
         "description" : "Rieši veci okolo známok (zapisovanie, pozeranie, ...); posiela notifikácie pri zmenách; treba spojeni so známky managerom pre prípad, že termín vyžaduje zápočet; komunikuje s DB",
         "documentation" : { },
         "group" : "Známkování",
-        "id" : "12",
+        "id" : "15",
         "name" : "Známky Manager",
         "properties" : {
           "structurizr.dsl.identifier" : "znamkymanager"
         },
         "relationships" : [ {
           "description" : "Zapísať / Zmeniť hodnotenie",
-          "destinationId" : "14",
-          "id" : "45",
+          "destinationId" : "19",
+          "id" : "54",
           "properties" : {
-            "structurizr.dsl.identifier" : "c7d6ad1b-38b3-474a-b2c9-85c594fe0b6d"
+            "structurizr.dsl.identifier" : "e5f22244-a47c-4adc-a643-a85b528c27a9"
           },
-          "sourceId" : "12",
+          "sourceId" : "15",
           "tags" : "Relationship"
         }, {
-          "destinationId" : "17",
-          "id" : "46",
+          "description" : "Posiela notifikácie pri zmene známky",
+          "destinationId" : "22",
+          "id" : "55",
           "properties" : {
-            "structurizr.dsl.identifier" : "db05860b-ddcf-487e-9231-666c3c0e0a1f"
+            "structurizr.dsl.identifier" : "c8d2d300-44ab-4994-8387-68e903936308"
           },
-          "sourceId" : "12",
+          "sourceId" : "15",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Posiela žiadosť o notifikáciu",
+          "destinationId" : "26",
+          "id" : "65",
+          "properties" : {
+            "structurizr.dsl.identifier" : "daafd154-e9e9-4dce-9755-3a934b59237c"
+          },
+          "sourceId" : "15",
           "tags" : "Relationship"
         } ],
         "tags" : "Element,Container"
       }, {
-        "description" : "Ukladá hodnotenie št aj s históriou v rámci jedného predmetu",
+        "description" : "Ukladá hodnotenie študenta aj s históriou v rámci jedného predmetu",
         "documentation" : { },
         "group" : "Známkování",
-        "id" : "14",
+        "id" : "19",
         "name" : "Známky DB",
         "properties" : {
           "structurizr.dsl.identifier" : "znamkydb"
@@ -387,7 +648,7 @@
       }, {
         "description" : "Externí modul pre osoby (extra info o nich, ...)",
         "documentation" : { },
-        "id" : "15",
+        "id" : "20",
         "name" : "Osoby",
         "properties" : {
           "structurizr.dsl.identifier" : "osoby"
@@ -396,34 +657,130 @@
       }, {
         "description" : "Externí modul pre predmety (aktuálne zapísané pre študenty, história, ...)",
         "documentation" : { },
-        "id" : "16",
+        "id" : "21",
         "name" : "Predmety",
         "properties" : {
           "structurizr.dsl.identifier" : "predmety"
         },
         "tags" : "Element,Container,Existing System"
       }, {
+        "components" : [ {
+          "description" : "Vytvorenie obsahu správy podla templatu",
+          "documentation" : { },
+          "id" : "23",
+          "name" : "Generátor obsahu správ",
+          "properties" : {
+            "structurizr.dsl.identifier" : "generatorobsahusprav"
+          },
+          "relationships" : [ {
+            "description" : "Poskytne obsah správy na poslanie",
+            "destinationId" : "25",
+            "id" : "67",
+            "properties" : {
+              "structurizr.dsl.identifier" : "81b622d2-77bb-4124-94ad-7579bb61aee7"
+            },
+            "sourceId" : "23",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Spravovanie a poskytovanie templatov pre notifikácie",
+          "documentation" : { },
+          "id" : "24",
+          "name" : "Template Manager",
+          "properties" : {
+            "structurizr.dsl.identifier" : "templatemanager"
+          },
+          "relationships" : [ {
+            "description" : "Načítá šablóny pre generaciu obsahu",
+            "destinationId" : "23",
+            "id" : "66",
+            "properties" : {
+              "structurizr.dsl.identifier" : "3733b002-2cea-4f71-bfb0-4908e2f5f50f"
+            },
+            "sourceId" : "24",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Komunikácia s externým modulom pre notifikácie",
+          "documentation" : { },
+          "id" : "25",
+          "name" : "Notifikácie Dispatcher",
+          "properties" : {
+            "structurizr.dsl.identifier" : "notifikaciedispatcher"
+          },
+          "relationships" : [ {
+            "description" : "Poskytuje všetky info na na odoslanie notifikacie",
+            "destinationId" : "27",
+            "id" : "71",
+            "properties" : {
+              "structurizr.dsl.identifier" : "3dd1113f-18c4-4ad4-b823-cf2fc01791bb"
+            },
+            "sourceId" : "25",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Komunikuju s ním Terminy Manager a Znamky Manager; Spúšťa tvorbu notifikácie",
+          "documentation" : { },
+          "id" : "26",
+          "name" : "Notifikácie Controller",
+          "properties" : {
+            "structurizr.dsl.identifier" : "notifikaciecontroller"
+          },
+          "relationships" : [ {
+            "description" : "Požiada o použitie daného templatu pre správu",
+            "destinationId" : "24",
+            "id" : "68",
+            "properties" : {
+              "structurizr.dsl.identifier" : "2ada1538-455e-4bd1-ab6e-9a37e0518044"
+            },
+            "sourceId" : "26",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Poskytne získanú adresu z Osoby modulu",
+            "destinationId" : "25",
+            "id" : "69",
+            "properties" : {
+              "structurizr.dsl.identifier" : "32ff4edc-b36f-4293-8140-ed829f952ae8"
+            },
+            "sourceId" : "26",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Poskytne info o termine/znamke ktoré sú obsahom správy",
+            "destinationId" : "23",
+            "id" : "70",
+            "properties" : {
+              "structurizr.dsl.identifier" : "2e708c4b-b0b0-4b25-a113-d70c8d4f7063"
+            },
+            "sourceId" : "26",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
         "description" : "Vytvára notifikácie (po obsahovej stránke čiže nejaké templaty); emaily, notifikácie do UI; (umožnění učitelům upravit obsah => treba napojiť na UI)",
         "documentation" : { },
-        "id" : "17",
+        "id" : "22",
         "name" : "Notifikator",
         "properties" : {
           "structurizr.dsl.identifier" : "notifikator"
         },
         "relationships" : [ {
-          "destinationId" : "18",
-          "id" : "47",
+          "description" : "Posiela hotové notifikácie na odoslanie",
+          "destinationId" : "27",
+          "id" : "56",
           "properties" : {
-            "structurizr.dsl.identifier" : "5e4d8d3d-6ab3-44fd-8618-cb2df3dd07cf"
+            "structurizr.dsl.identifier" : "aacbb774-6242-4afe-b9a8-2837002843b8"
           },
-          "sourceId" : "17",
+          "sourceId" : "22",
           "tags" : "Relationship"
         } ],
         "tags" : "Element,Container"
       }, {
         "description" : "Externí modul na notifikácie a centrálnym mail serverom systému",
         "documentation" : { },
-        "id" : "18",
+        "id" : "27",
         "name" : "Ext. notif.",
         "properties" : {
           "structurizr.dsl.identifier" : "extnotif"
@@ -440,10 +797,10 @@
       },
       "relationships" : [ {
         "description" : "API na zistení a zápis dat",
-        "destinationId" : "19",
-        "id" : "32",
+        "destinationId" : "28",
+        "id" : "41",
         "properties" : {
-          "structurizr.dsl.identifier" : "16cc0c86-3f20-46cd-9f4b-ffb816027185"
+          "structurizr.dsl.identifier" : "f52bda83-80d8-4880-807e-d6b878e69800"
         },
         "sourceId" : "1",
         "tags" : "Relationship"
@@ -452,7 +809,7 @@
     }, {
       "description" : "Spravuje data veci, co se dejou na univerzite. Vcetne zkousek, predmetu a zapisu.",
       "documentation" : { },
-      "id" : "19",
+      "id" : "28",
       "location" : "Unspecified",
       "name" : "SIS",
       "properties" : {
@@ -463,78 +820,252 @@
   },
   "name" : "SIS Exams Workspace",
   "properties" : {
-    "structurizr.dsl" : "d29ya3NwYWNlICJTSVMgRXhhbXMgV29ya3NwYWNlIiAiVGVudG8gd29ya3NwYWNlIGRva3VtZW50dWplIGFyY2hpdGVrdHVydSBzeXN0w6ltdSBzcHLDoXZ5IHprb3XFoWVrIGEgem7DoW1layB2IHLDoW1jaSBTdHVkaWpuw61obyBpbmZvcm1hxI1uw61obyBzeXN0w6ltdS4iIHsKCiAgICBtb2RlbCB7CiAgICAgICAgIyBTVyBTeXN0ZW1zCiAgICAgICAgU0lTRXhhbXMgPSBzb2Z0d2FyZVN5c3RlbSAiWmtvdcWha3kgdiByw6FtY2kgU0lTIiAiU3ByYXZ1amUgdnl0dmFyZW5pIHprb3VzZWssIHphcGlzIHN0dWRlbnR1IGEgbW9uaXRvcnVqZSBqZWppY2ggdnlzbGVka3kiIHsKCiAgICAgICAgICAgIEdyb3VwICJUZXJtw61ueSB6a291xaFlayIgewogICAgICAgICAgICAgICAgVGVybWlueVVJID0gY29udGFpbmVyICJUZXJtw61ueSBVSSIgIlpvYnJhesOtIFVJIG5hIHRlcm3DrW55IHByZSB1xI1pdGVsZSBhIMWhdHVkZW50eSIgIiIgIldlYiBGcm9udC1FbmQiCiAgICAgICAgICAgICAgICBUZXJtaW55TWFuYWdlciA9IGNvbnRhaW5lciAiVGVybcOtbnkgTWFuYWdlciIgIlJpZcWhaSB2ZWNpIG9rb2xvIHRlcm3DrW5vdiAodm7DunRvcm7DqSDEjWxlbmVuaWUgbmEgbWluaW3DoWxuZSDEjWFrYcSNa3UgYSBwcmlobGFzb3ZhbmllKTsgcG9zaWVsYSBub3RpZmlrw6FjaWUgcHJpIHptZW7DoWNoOyBrb211bmlrdWplIHMgREIiIHsKICAgICAgICAgICAgICAgICAgICBDZWthY2lMaXN0aW5hQ29udHJvbGxlciA9IGNvbXBvbmVudCAixIxla2Fjw60gTGlzdGluYSBDb250cm9sbGVyIiAiUHLDrWhsYXNlbmllIG5hIMSNYWthY2l1IGxpc3Rpbnk7IE9kaGzDoXNhbmllIHogxI1ha2FjZWogbGlzdGlueSIKICAgICAgICAgICAgICAgICAgICBIbGFzZW5pTmFUZXJtaW55Q29udHJvbGxlciA9IGNvbXBvbmVudCAiSGzDocWhZW7DrSBuYSB0ZXJtw61ueSBDb250cm9sbGVyIiAiUHJpaGzDoXNlbmllIG5hIHRlcm3DrW47IE9kaGzDoXNlbmllIHogdGVybcOtbnUiCiAgICAgICAgICAgICAgICAgICAgVGVybWlueURhdGFDb250cm9sbGVyID0gY29tcG9uZW50ICJUZXJtw61ueSBEYXRhIENvbnRyb2xsZXIiICJWeXR2b3JlbmllIHRlcm3DrW51OyDDmnByYXZhIHRlcm3DrW51IgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgVGVybWlueURCID0gY29udGFpbmVyICJUZXJtw61ueURCIiAiVWtsYWTDoSBpbmZvIG8gdGVybcOtbm9jaCwgcHJpaGzDoXNlbsO9Y2ggc3R1ZGVudGVjaCwgxI1ha2Fqw7pjaWNoIHN0dWRlbnRlY2giICIiICJEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgICAgIFRlcm1pbnlJbmZvU2F2ZXIgPSBjb21wb25lbnQgIlRlcm3DrW55IEluZm8gU2F2ZXIiICJVa2xhZGFuaWUgdGVybcOtbm92OyBVbG/FvmnFpSBwcmlobMOhc2VuaWUgbmEgdGVybcOtbjsgVWxvxb5pxaUgb2RobMOhc2VuaWUgeiB0ZXJtw61udTsgVWxvxb5pxaUgcHJpaGzDoXNlbmllIG5hIMSNYWsuIGxpc3RpbnU7IFVsb8W+acWlIG9kaGzDoXNlbmllIHogxI1hay4gbGlzdGlueSIKICAgICAgICAgICAgICAgICAgICBUZXJtaW55SW5mb1Byb3ZpZGVyID0gY29tcG9uZW50ICJUZXJtw61ueSBJbmZvIFByb3ZpZGVyIiAiUG9za3l0bsO6xaUgaW5mb3Jtw6FjaWUgbyB0ZXJtw61uZSIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIEtvbmZsaWt0RGV0ZWt0b3IgPSBjb250YWluZXIgIktvbmZsaWt0IERldGVrdG9yIiAiVm9sw6EgaG8gdGVybcOtbnkgbWFuYWdlciwgZGV0ZWt1amUga29uZmxpa3R5LCByZXBvcnR1amUgc3RhdiB0ZXJtw61ueSBVSSIKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgR3JvdXAgIlpuw6Fta292w6Fuw60iIHsKICAgICAgICAgICAgICAgIFpuYW1reVVJID0gY29udGFpbmVyICJabsOhbWt5IFVJIiAiWm9icmF6w60gVUkgbmEgem7DoW1reSBwcmUgdcSNaXRlbGUgYSDFoXR1ZGVudHkiICIiICJXZWIgRnJvbnQtRW5kIgogICAgICAgICAgICAgICAgWm5hbWt5TWFuYWdlciA9IGNvbnRhaW5lciAiWm7DoW1reSBNYW5hZ2VyIiAiUmllxaFpIHZlY2kgb2tvbG8gem7DoW1vayAoemFwaXNvdmFuaWUsIHBvemVyYW5pZSwgLi4uKTsgcG9zaWVsYSBub3RpZmlrw6FjaWUgcHJpIHptZW7DoWNoOyB0cmViYSBzcG9qZW5pIHNvIHpuw6Fta3kgbWFuYWdlcm9tIHByZSBwcsOtcGFkLCDFvmUgdGVybcOtbiB2ecW+YWR1amUgesOhcG/EjWV0OyBrb211bmlrdWplIHMgREIiIHsKICAgICAgICAgICAgICAgICAgICBabmFta3lEYXRhQ29udHJvbGxlciA9IGNvbXBvbmVudCAiWm7DoW1reSBEYXRhIENvbnRyb2xsZXIiICLEjHRlIGEgemFwaXN1amUgem7DoW1reSwgcMWZaSB6bcSbbsSbIMW+w6Fkw6EgbyBub3RpZmlrYWNpIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgWm5hbWt5REIgPSBjb250YWluZXIgIlpuw6Fta3kgREIiICJVa2xhZMOhIGhvZG5vdGVuaWUgxaF0IGFqIHMgaGlzdMOzcmlvdSB2IHLDoW1jaSBqZWRuw6lobyBwcmVkbWV0dSIgIiIgIkRhdGFiYXNlIgogICAgICAgICAgICB9CiAgICAgICAgICAgIAogICAgICAgICAgICBPc29ieSA9IGNvbnRhaW5lciAiT3NvYnkiICJFeHRlcm7DrSBtb2R1bCBwcmUgb3NvYnkgKGV4dHJhIGluZm8gbyBuaWNoLCAuLi4pIiAiIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgICAgICBQcmVkbWV0eSA9IGNvbnRhaW5lciAiUHJlZG1ldHkiICJFeHRlcm7DrSBtb2R1bCBwcmUgcHJlZG1ldHkgKGFrdHXDoWxuZSB6YXDDrXNhbsOpIHByZSDFoXR1ZGVudHksIGhpc3TDs3JpYSwgLi4uKSIgIiIgIkV4aXN0aW5nIFN5c3RlbSIKICAgICAgICAgICAgTm90aWZpa2F0b3IgPSBjb250YWluZXIgIk5vdGlmaWthdG9yIiAiVnl0dsOhcmEgbm90aWZpa8OhY2llIChwbyBvYnNhaG92ZWogc3Ryw6Fua2UgxI1pxb5lIG5lamFrw6kgdGVtcGxhdHkpOyBlbWFpbHksIG5vdGlmaWvDoWNpZSBkbyBVSTsgKHVtb8W+bsSbbsOtIHXEjWl0ZWzFr20gdXByYXZpdCBvYnNhaCA9PiB0cmViYSBuYXBvamnFpSBuYSBVSSkiCiAgICAgICAgICAgIEV4dE5vdGlmID0gY29udGFpbmVyICJFeHQuIG5vdGlmLiIgIkV4dGVybsOtIG1vZHVsIG5hIG5vdGlmaWvDoWNpZSBhIGNlbnRyw6FsbnltIG1haWwgc2VydmVyb20gc3lzdMOpbXUiICIiICJFeGlzdGluZyBTeXN0ZW0iCiAgICAgICAgfQoKICAgICAgICBTSVMgPSBzb2Z0d2FyZVN5c3RlbSAiU0lTIiAiU3ByYXZ1amUgZGF0YSB2ZWNpLCBjbyBzZSBkZWpvdSBuYSB1bml2ZXJ6aXRlLiBWY2V0bmUgemtvdXNlaywgcHJlZG1ldHUgYSB6YXBpc3UuIiAiRXhpc3RpbmcgU3lzdGVtIgoKICAgICAgICAjIGFjdG9ycwogICAgICAgIHVjaXRlbCA9IHBlcnNvbiAiVcSNaXRlbCIgIlZ5dHZhcmkgdGVybWlueSBuYSB6a291c2t5IGEgemFwaXN1amUgaG9kbm9jZW5pIgogICAgICAgIHN0dWRlbnQgPSBwZXJzb24gIlN0dWRlbnQiICJaYXBpc3VqZSBzaSB0ZXJtaW55IHprb3VzZWsgYSBkaXZhIHNlIGphayBkb3BhZGxpIgogICAgICAgIG1hbmF6ZXIgPSBwZXJzb24gIk1hbmHFvmVyIiAiRGVsYSBzdGF0aXN0aWt5IGEgc3ByYXZ1amUgdnl1Y3VqaWNpIgoKICAgICAgICAjIHJlbGF0aW9uc2hpcHMgYmV0d2VlbiB1c2VycyBhbmQgRXhhbXMgc3lzdGVtCiAgICAgICAgdWNpdGVsIC0+IFNJU0V4YW1zICJab2JyYXplbsOtIHRlcm3DrW51IgogICAgICAgIHVjaXRlbCAtPiBTSVNFeGFtcyAiVnl0dmFyaSB0ZXJtaW55IGEgemFwaXN1amUgem5hbWt5IgogICAgICAgIHN0dWRlbnQgLT4gU0lTRXhhbXMgIsSMdGUgdsO9c2xlZGt5IHprb3XFoWVrIgogICAgICAgIHN0dWRlbnQgLT4gU0lTRXhhbXMgIlphcGlzdWplIHNpIHprb3XFoWt5IgogICAgICAgIG1hbmF6ZXIgLT4gU0lTRXhhbXMgIsSMdGUgc3RhdGlzdGlreSIKCiAgICAgICAgdWNpdGVsIC0+IFRlcm1pbnlVSSAiVnl0dsOhxZnDrSBhIHpvYnJhenVqZSB0ZXJtw61ueSIKICAgICAgICB1Y2l0ZWwgLT4gWm5hbWt5VUkgIlphcGlzdWplIHpuw6Fta3kiCiAgICAgICAgc3R1ZGVudCAtPiBabmFta3lVSSAixIx0ZSB2w71zbGVka3kgemtvdcWhZWsiCiAgICAgICAgc3R1ZGVudCAtPiBUZXJtaW55VUkgIlphcGlzdWplIHNpIHprb3XFoWt5IgoKICAgICAgICAjIFJlbGF0aW9uc2hpcHMgYmV0d2VlbiBTVyBTeXN0ZW1zCiAgICAgICAgU0lTRXhhbXMgLT4gU0lTICJBUEkgbmEgemlzdGVuw60gYSB6w6FwaXMgZGF0IgoKICAgICAgICAjIFJlbGF0aW9uc2hpcHMgaW5zaWRlIFNJU0V4YW1zCiAgICAgICAgVGVybWlueVVJIC0+IFRlcm1pbnlNYW5hZ2VyCiAgICAgICAgVGVybWlueU1hbmFnZXIgLT4gVGVybWlueURCICJVa2xhZGFuaWUgdGVybcOtbm92IgogICAgICAgIEtvbmZsaWt0RGV0ZWt0b3IgLT4gVGVybWlueVVJCiAgICAgICAgS29uZmxpa3REZXRla3RvciAtPiBUZXJtaW55REIKICAgICAgICBUZXJtaW55TWFuYWdlciAtPiBLb25mbGlrdERldGVrdG9yCiAgICAgICAgVGVybWlueU1hbmFnZXIgLT4gTm90aWZpa2F0b3IKICAgICAgICBUZXJtaW55VUkgLT4gT3NvYnkKICAgICAgICBUZXJtaW55VUkgLT4gUHJlZG1ldHkKICAgICAgICBabmFta3lVSSAtPiBabmFta3lNYW5hZ2VyCiAgICAgICAgWm5hbWt5VUkgLT4gT3NvYnkgIlpvYnJhemnFpSDFoXR1ZGVudG92aSBqZWhvIGhvZG5vdGVuaWUiCiAgICAgICAgWm5hbWt5VUkgLT4gT3NvYnkgIlpvYnJheml0IHVjaXRlbG92aSB0YWJ1bGt1IHMgaG9kbm90ZW5pbSBzdHVkZW50b3YiCiAgICAgICAgWm5hbWt5VUkgLT4gUHJlZG1ldHkKICAgICAgICBabmFta3lNYW5hZ2VyIC0+IFpuYW1reURCICJaYXDDrXNhxaUgLyBabWVuacWlIGhvZG5vdGVuaWUiCiAgICAgICAgWm5hbWt5TWFuYWdlciAtPiBOb3RpZmlrYXRvcgogICAgICAgIE5vdGlmaWthdG9yIC0+IEV4dE5vdGlmCiAgICAgICAgCiAgICAgICAgIyBSZWxhdGlvbnNoaXBzIGluc2lkZSBabmFta3lNYW5hZ2VyCiAgICAgICAgWm5hbWt5RGF0YUNvbnRyb2xsZXIgLT4gWm5hbWt5REIKICAgICAgICBabmFta3lEYXRhQ29udHJvbGxlciAtPiBOb3RpZmlrYXRvcgoKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgc3lzdGVtQ29udGV4dCBTSVNFeGFtcyAiU0lTRXhhbXNTeXN0ZW1EaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29udGFpbmVyIFNJU0V4YW1zICJTSVNFeGFtc0NvbnRhaW5lckRpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgVGVybWlueU1hbmFnZXIgIlRlcm1pbnlNYW5hZ2VyQ29tcG9uZW50RGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBUZXJtaW55REIgIlRlcm1pbnlEQkNvbXBvbmVudERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgWm5hbWt5TWFuYWdlciAiWm5hbWt5TWFuYWdlckNvbXBvbmVudERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICB0aGVtZSBkZWZhdWx0CgogICAgICAgIHN0eWxlcyB7CiAgICAgICAgICAgIGVsZW1lbnQgIkV4aXN0aW5nIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzgyNDNkNQogICAgICAgICAgICAgICAgc2hhcGUgQ3lsaW5kZXIKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJXZWIgRnJvbnQtRW5kIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM4YWQ1NDMKICAgICAgICAgICAgICAgIHNoYXBlIFdlYkJyb3dzZXIKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCn0="
+    "structurizr.dsl" : "d29ya3NwYWNlICJTSVMgRXhhbXMgV29ya3NwYWNlIiAiVGVudG8gd29ya3NwYWNlIGRva3VtZW50dWplIGFyY2hpdGVrdHVydSBzeXN0w6ltdSBzcHLDoXZ5IHprb3XFoWVrIGEgem7DoW1layB2IHLDoW1jaSBTdHVkaWpuw61obyBpbmZvcm1hxI1uw61obyBzeXN0w6ltdS4iIHsKCiAgICBtb2RlbCB7CiAgICAgICAgIyBTVyBTeXN0ZW1zCiAgICAgICAgU0lTRXhhbXMgPSBzb2Z0d2FyZVN5c3RlbSAiWmtvdcWha3kgdiByw6FtY2kgU0lTIiAiU3ByYXZ1amUgdnl0dmFyZW5pIHprb3VzZWssIHphcGlzIHN0dWRlbnR1IGEgbW9uaXRvcnVqZSBqZWppY2ggdnlzbGVka3kiIHsKCiAgICAgICAgICAgIEdyb3VwICJUZXJtw61ueSB6a291xaFlayIgewogICAgICAgICAgICAgICAgVGVybWlueVVJID0gY29udGFpbmVyICJUZXJtw61ueSBVSSIgIlpvYnJhesOtIFVJIG5hIHRlcm3DrW55IHByZSB1xI1pdGVsZSBhIMWhdHVkZW50eSIgIiIgIldlYiBGcm9udC1FbmQiCiAgICAgICAgICAgICAgICBUZXJtaW55TWFuYWdlciA9IGNvbnRhaW5lciAiVGVybcOtbnkgTWFuYWdlciIgIlJpZcWhaSB2ZWNpIG9rb2xvIHRlcm3DrW5vdiAodm7DunRvcm7DqSDEjWxlbmVuaWUgbmEgbWluaW3DoWxuZSDEjWFrYcSNa3UgYSBwcmlobGFzb3ZhbmllKTsgcG9zaWVsYSBub3RpZmlrw6FjaWUgcHJpIHptZW7DoWNoOyBrb211bmlrdWplIHMgREIiIHsKICAgICAgICAgICAgICAgICAgICBDZWthY2lMaXN0aW5hQ29udHJvbGxlciA9IGNvbXBvbmVudCAixIxla2Fjw60gTGlzdGluYSBDb250cm9sbGVyIiAiUHJpaGzDoXNlbmllIG5hIMSNYWthY2l1IGxpc3Rpbnk7IE9kaGzDoXNhbmllIHogxI1ha2FjZWogbGlzdGlueSIKICAgICAgICAgICAgICAgICAgICBIbGFzZW5pTmFUZXJtaW55Q29udHJvbGxlciA9IGNvbXBvbmVudCAiSGzDocWhZW7DrSBuYSB0ZXJtw61ueSBDb250cm9sbGVyIiAiUHJpaGzDoXNlbmllIG5hIHRlcm3DrW47IE9kaGzDoXNlbmllIHogdGVybcOtbnUiCiAgICAgICAgICAgICAgICAgICAgVGVybWlueURhdGFDb250cm9sbGVyID0gY29tcG9uZW50ICJUZXJtw61ueSBEYXRhIENvbnRyb2xsZXIiICJWeXR2b3JlbmllIHRlcm3DrW51OyDDmnByYXZhIHRlcm3DrW51IgogICAgICAgICAgICAgICAgICAgIFRlcm1pbnlEQkNvbnRyb2xsZXIgPSBjb21wb25lbnQgIlRlcm3DrW55IERCIENvbnRyb2xsZXIiICJLb211bmlrw6FjaWEgcyBkYXRhYsOhem91IG5hIHRlcm3DrW55IgogICAgICAgICAgICAgICAgICAgIFRlcm1pbnlTeW5jZXIgPSBjb21wb25lbnQgIlN5bmNocm9uaXrDoWNpYSB0ZXJtw61ub3YiICJQb3NpZWxhIGluZm9ybcOhY2llIG8gem1lbsOhY2ggdiB0ZXJtw61ub2NoIHByZSBwb3XFvml0aWUgdiBabmFta3lEQiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgIFRlcm1pbnlEQiA9IGNvbnRhaW5lciAiVGVybcOtbnlEQiIgIlVrbGFkw6EgaW5mbyBvIHRlcm3DrW5vY2gsIHByaWhsw6FzZW7DvWNoIHN0dWRlbnRlY2gsIMSNYWthasO6Y2ljaCBzdHVkZW50ZWNoIiAiIiAiRGF0YWJhc2UiCiAgICAgICAgICAgICAgICBLb25mbGlrdERldGVrdG9yID0gY29udGFpbmVyICJLb25mbGlrdCBEZXRla3RvciIgIlZvbMOhIGhvIHRlcm3DrW55IG1hbmFnZXIsIGRldGVrdWplIGtvbmZsaWt0eSwgcmVwb3J0dWplIHN0YXYgdGVybcOtbnkgVUkiIHsKICAgICAgICAgICAgICAgICAgICBLb25mbGlrdERldGVrdG9yREJDb250cm9sbGVyID0gY29tcG9uZW50ICJEQiBDb250cm9sbGVyIiAiWsOtc2thdmEgaW5mb3Jtw6FjaWUgbyB0ZXJtw61ub2NoIHogZGF0YWLDoXppIgogICAgICAgICAgICAgICAgICAgIEtvbmZsaWt0RGV0ZWt0b3JGaW5kZXIgPSBjb21wb25lbnQgIkjEvmFkYcSNIGtvbmZsaWt0b3YiICJIxL5hZMOhIGtvbmZsaWt0eSB2IHRlcm3DrW5vY2giCiAgICAgICAgICAgICAgICAgICAgS29uZmxpa3REZXRla3RvclJlcG9ydGVyID0gY29tcG9uZW50ICJSZXBvcnRlciBrb25mbGlrdG92IiAiS29tdW5pa3VqZSBzIG5vdGlmaWvDoXRvcm9tIG8gdsO9c2xlZGtvY2giCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIEdyb3VwICJabsOhbWtvdsOhbsOtIiB7CiAgICAgICAgICAgICAgICBabmFta3lVSSA9IGNvbnRhaW5lciAiWm7DoW1reSBVSSIgIlpvYnJhesOtIFVJIG5hIHpuw6Fta3kgcHJlIHXEjWl0ZWxlIGEgxaF0dWRlbnR5IiAiIiAiV2ViIEZyb250LUVuZCIKICAgICAgICAgICAgICAgIFpuYW1reU1hbmFnZXIgPSBjb250YWluZXIgIlpuw6Fta3kgTWFuYWdlciIgIlJpZcWhaSB2ZWNpIG9rb2xvIHpuw6Ftb2sgKHphcGlzb3ZhbmllLCBwb3plcmFuaWUsIC4uLik7IHBvc2llbGEgbm90aWZpa8OhY2llIHByaSB6bWVuw6FjaDsgdHJlYmEgc3BvamVuaSBzbyB6bsOhbWt5IG1hbmFnZXJvbSBwcmUgcHLDrXBhZCwgxb5lIHRlcm3DrW4gdnnFvmFkdWplIHrDoXBvxI1ldDsga29tdW5pa3VqZSBzIERCIiB7CiAgICAgICAgICAgICAgICAgICAgWm5hbWt5RGF0YUNvbnRyb2xsZXIgPSBjb21wb25lbnQgIlpuw6Fta3kgRGF0YSBDb250cm9sbGVyIiAixIx0ZSBhIHphcGlzdWplIHpuw6Fta3ksIHDFmWkgem3Em27EmyDFvsOhZMOhIG8gbm90aWZpa2FjaSIKICAgICAgICAgICAgICAgICAgICBabmFta3lEQkNvbnRyb2xsZXIgPSBjb21wb25lbnQgIlpuw6Fta3kgREIgQ29udHJvbGxlciIgIktvbXVuaWvDoWNpYSBzIGRhdGFiw6F6b3UgbmEgem7DoW1reSIKICAgICAgICAgICAgICAgICAgICBabmFta3lTeW5jZXIgPSBjb21wb25lbnQgIlN5bmNocm9uaXp1amUgdGVybcOtbnkiICJWeXR2w6FyYSBub3bDqSB0ZXJtw61ueSB2IERCLCB1a2xhZMOhIGluZm9ybcOhY2llIG8gcHJpaGzDoXNlbsO9Y2ggdGVybcOtbm9jaCDFoXR1ZGVudGEiCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBabmFta3lEQiA9IGNvbnRhaW5lciAiWm7DoW1reSBEQiIgIlVrbGFkw6EgaG9kbm90ZW5pZSDFoXR1ZGVudGEgYWogcyBoaXN0w7NyaW91IHYgcsOhbWNpIGplZG7DqWhvIHByZWRtZXR1IiAiIiAiRGF0YWJhc2UiCiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIE9zb2J5ID0gY29udGFpbmVyICJPc29ieSIgIkV4dGVybsOtIG1vZHVsIHByZSBvc29ieSAoZXh0cmEgaW5mbyBvIG5pY2gsIC4uLikiICIiICJFeGlzdGluZyBTeXN0ZW0iCiAgICAgICAgICAgIFByZWRtZXR5ID0gY29udGFpbmVyICJQcmVkbWV0eSIgIkV4dGVybsOtIG1vZHVsIHByZSBwcmVkbWV0eSAoYWt0dcOhbG5lIHphcMOtc2Fuw6kgcHJlIMWhdHVkZW50eSwgaGlzdMOzcmlhLCAuLi4pIiAiIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgICAgICBOb3RpZmlrYXRvciA9IGNvbnRhaW5lciAiTm90aWZpa2F0b3IiICJWeXR2w6FyYSBub3RpZmlrw6FjaWUgKHBvIG9ic2Fob3ZlaiBzdHLDoW5rZSDEjWnFvmUgbmVqYWvDqSB0ZW1wbGF0eSk7IGVtYWlseSwgbm90aWZpa8OhY2llIGRvIFVJOyAodW1vxb5uxJtuw60gdcSNaXRlbMWvbSB1cHJhdml0IG9ic2FoID0+IHRyZWJhIG5hcG9qacWlIG5hIFVJKSIgewogICAgICAgICAgICAgICAgR2VuZXJhdG9yT2JzYWh1U3ByYXYgPSBjb21wb25lbnQgIkdlbmVyw6F0b3Igb2JzYWh1IHNwcsOhdiIgIlZ5dHZvcmVuaWUgb2JzYWh1IHNwcsOhdnkgcG9kbGEgdGVtcGxhdHUiCiAgICAgICAgICAgICAgICBUZW1wbGF0ZU1hbmFnZXIgPSBjb21wb25lbnQgIlRlbXBsYXRlIE1hbmFnZXIiICJTcHJhdm92YW5pZSBhIHBvc2t5dG92YW5pZSB0ZW1wbGF0b3YgcHJlIG5vdGlmaWvDoWNpZSIKICAgICAgICAgICAgICAgIE5vdGlmaWthY2llRGlzcGF0Y2hlciA9IGNvbXBvbmVudCAiTm90aWZpa8OhY2llIERpc3BhdGNoZXIiICJLb211bmlrw6FjaWEgcyBleHRlcm7DvW0gbW9kdWxvbSBwcmUgbm90aWZpa8OhY2llIgogICAgICAgICAgICAgICAgTm90aWZpa2FjaWVDb250cm9sbGVyID0gY29tcG9uZW50ICJOb3RpZmlrw6FjaWUgQ29udHJvbGxlciIgIktvbXVuaWt1anUgcyBuw61tIFRlcm1pbnkgTWFuYWdlciBhIFpuYW1reSBNYW5hZ2VyOyBTcMO6xaHFpWEgdHZvcmJ1IG5vdGlmaWvDoWNpZSIKICAgICAgICAgICAgfSAgICAgICAgICAgIAogICAgICAgICAgICBFeHROb3RpZiA9IGNvbnRhaW5lciAiRXh0LiBub3RpZi4iICJFeHRlcm7DrSBtb2R1bCBuYSBub3RpZmlrw6FjaWUgYSBjZW50csOhbG55bSBtYWlsIHNlcnZlcm9tIHN5c3TDqW11IiAiIiAiRXhpc3RpbmcgU3lzdGVtIgogICAgICAgIH0KCiAgICAgICAgU0lTID0gc29mdHdhcmVTeXN0ZW0gIlNJUyIgIlNwcmF2dWplIGRhdGEgdmVjaSwgY28gc2UgZGVqb3UgbmEgdW5pdmVyeml0ZS4gVmNldG5lIHprb3VzZWssIHByZWRtZXR1IGEgemFwaXN1LiIgIkV4aXN0aW5nIFN5c3RlbSIKCiAgICAgICAgIyBhY3RvcnMKICAgICAgICB1Y2l0ZWwgPSBwZXJzb24gIlXEjWl0ZWwiICJWeXR2YXJpIHRlcm1pbnkgbmEgemtvdXNreSBhIHphcGlzdWplIGhvZG5vY2VuaSIKICAgICAgICBzdHVkZW50ID0gcGVyc29uICJTdHVkZW50IiAiWmFwaXN1amUgc2kgdGVybWlueSB6a291c2VrIGEgZGl2YSBzZSBqYWsgZG9wYWRsaSIKICAgICAgICBtYW5hemVyID0gcGVyc29uICJNYW5hxb5lciIgIkRlbGEgc3RhdGlzdGlreSBhIHNwcmF2dWplIHZ5dWN1amljaSIKCiAgICAgICAgIyByZWxhdGlvbnNoaXBzIGJldHdlZW4gdXNlcnMgYW5kIEV4YW1zIHN5c3RlbQogICAgICAgIHVjaXRlbCAtPiBTSVNFeGFtcyAiWm9icmF6ZW7DrSB0ZXJtw61udSIKICAgICAgICB1Y2l0ZWwgLT4gU0lTRXhhbXMgIlZ5dHZhcmkgdGVybWlueSBhIHphcGlzdWplIHpuYW1reSIKICAgICAgICBzdHVkZW50IC0+IFNJU0V4YW1zICLEjHRlIHbDvXNsZWRreSB6a291xaFlayIKICAgICAgICBzdHVkZW50IC0+IFNJU0V4YW1zICJaYXBpc3VqZSBzaSB6a291xaFreSIKICAgICAgICBtYW5hemVyIC0+IFNJU0V4YW1zICLEjHRlIHN0YXRpc3Rpa3kiCgogICAgICAgIHVjaXRlbCAtPiBUZXJtaW55VUkgIlZ5dHbDocWZw60gYSB6b2JyYXp1amUgdGVybcOtbnkiCiAgICAgICAgdWNpdGVsIC0+IFpuYW1reVVJICJaYXBpc3VqZSB6bsOhbWt5IgogICAgICAgIHN0dWRlbnQgLT4gWm5hbWt5VUkgIsSMdGUgdsO9c2xlZGt5IHprb3XFoWVrIgogICAgICAgIHN0dWRlbnQgLT4gVGVybWlueVVJICJaYXBpc3VqZSBzaSB6a291xaFreSIKCiAgICAgICAgIyBSZWxhdGlvbnNoaXBzIGJldHdlZW4gU1cgU3lzdGVtcwogICAgICAgIFNJU0V4YW1zIC0+IFNJUyAiQVBJIG5hIHppc3RlbsOtIGEgesOhcGlzIGRhdCIKCiAgICAgICAgIyBSZWxhdGlvbnNoaXBzIGluc2lkZSBTSVNFeGFtcwogICAgICAgIFRlcm1pbnlVSSAtPiBUZXJtaW55TWFuYWdlcgogICAgICAgIFRlcm1pbnlNYW5hZ2VyIC0+IFRlcm1pbnlEQiAiVWtsYWRhbmllIHRlcm3DrW5vdiIKICAgICAgICBLb25mbGlrdERldGVrdG9yIC0+IFRlcm1pbnlVSSAiUG9zaWVsYSB2w71zbGVka3kgZGV0ZWtjaWUga29uZmxpa3RvdiIKICAgICAgICBLb25mbGlrdERldGVrdG9yIC0+IFRlcm1pbnlEQiAixIzDrXRhIGluZm9ybcOhY2llIG8gdGVybcOtbm9jaCIKICAgICAgICBUZXJtaW55TWFuYWdlciAtPiBLb25mbGlrdERldGVrdG9yICJWb2zDoSBkZXRla2NpdSBrb25mbGlrdG92IgogICAgICAgIFRlcm1pbnlNYW5hZ2VyIC0+IE5vdGlmaWthdG9yICJQcmkgem1lbmUvcHJpZGFuaSB0ZXJtaW51IMW+aWFkYSBvIHBvc2xhbmllIG5vdGlmaWthY2llIgogICAgICAgIFRlcm1pbnlVSSAtPiBPc29ieQogICAgICAgIFRlcm1pbnlVSSAtPiBQcmVkbWV0eQogICAgICAgIFpuYW1reVVJIC0+IFpuYW1reU1hbmFnZXIgIlByaSB6bWVuZSB6bsOhbWt5IMW+aWFkYSBvIHBvc2xhbmllIG5vdGlmaWthY2llIgogICAgICAgIFpuYW1reVVJIC0+IE9zb2J5ICJab2JyYXppxaUgxaF0dWRlbnRvdmkgamVobyBob2Rub3RlbmllIgogICAgICAgIFpuYW1reVVJIC0+IE9zb2J5ICJab2JyYXppdCB1Y2l0ZWxvdmkgdGFidWxrdSBzIGhvZG5vdGVuaW0gc3R1ZGVudG92IgogICAgICAgIFpuYW1reVVJIC0+IFByZWRtZXR5CiAgICAgICAgWm5hbWt5TWFuYWdlciAtPiBabmFta3lEQiAiWmFww61zYcWlIC8gWm1lbmnFpSBob2Rub3RlbmllIgogICAgICAgIFpuYW1reU1hbmFnZXIgLT4gTm90aWZpa2F0b3IgIlBvc2llbGEgbm90aWZpa8OhY2llIHByaSB6bWVuZSB6bsOhbWt5IgogICAgICAgIE5vdGlmaWthdG9yIC0+IEV4dE5vdGlmICJQb3NpZWxhIGhvdG92w6kgbm90aWZpa8OhY2llIG5hIG9kb3NsYW5pZSIKICAgICAgICBUZXJtaW55TWFuYWdlciAtPiBabmFta3lNYW5hZ2VyICJTeW5jaHJvbml6dWplIHRlcm3DrW55IG1lZHppIERCIgoKICAgICAgICAjIFJlbGF0aW9uc2hpcHMgaW5zaWRlIFpuYW1reU1hbmFnZXIKICAgICAgICBabmFta3lEYXRhQ29udHJvbGxlciAtPiBabmFta3lEQkNvbnRyb2xsZXIgIlVrbGFkw6Egem7DoW1reSAvIFrDrXNrYXZhIHpuw6Fta3kiCiAgICAgICAgWm5hbWt5RGF0YUNvbnRyb2xsZXIgLT4gTm90aWZpa2F0b3IgIlBvc2llbGEgxb5pYWRvc8WlIG8gbm90aWZpa8OhY2l1IgogICAgICAgIFpuYW1reURCQ29udHJvbGxlciAtPiBabmFta3lEQiAiVWtsYWTDoSB6bWVueSBkbyBkYXRhYsOhemUgLyDEjcOtdGEgREIiCiAgICAgICAgWm5hbWt5VUkgLT4gWm5hbWt5RGF0YUNvbnRyb2xsZXIgIlBvc2llbGEgxb5pYWRvc3RpIG8gem1lbnUgem7DoW1reSAvIHrDrXNrYXZhIGluZm9ybcOhY2llIG8gem7DoW1rYWNoIgogICAgICAgIFRlcm1pbnlNYW5hZ2VyIC0+IFpuYW1reVN5bmNlciAiUHLDrWptYSBpbmZvcm3DoWNpZSB6IHRlcm3DrW5vdiIKICAgICAgICBabmFta3lTeW5jZXIgLT4gWm5hbWt5REIgIlVrbGFkw6EgZMOhdGEgZG8gREIiCgogICAgICAgICNSZWxhdGlvbnNoaXBzIGluc2lkZSBOb3RpZmlrYXRvcgogICAgICAgIFRlcm1pbnlNYW5hZ2VyIC0+IE5vdGlmaWthY2llQ29udHJvbGxlciAiUG9zaWVsYSDFvmlhZG9zxaUgbyBub3RpZmlrw6FjaXUiCiAgICAgICAgWm5hbWt5TWFuYWdlciAtPiBOb3RpZmlrYWNpZUNvbnRyb2xsZXIgIlBvc2llbGEgxb5pYWRvc8WlIG8gbm90aWZpa8OhY2l1IgogICAgICAgIFRlbXBsYXRlTWFuYWdlciAtPiBHZW5lcmF0b3JPYnNhaHVTcHJhdiAiTmHEjcOtdMOhIMWhYWJsw7NueSBwcmUgZ2VuZXJhY2l1IG9ic2FodSIKICAgICAgICBHZW5lcmF0b3JPYnNhaHVTcHJhdiAtPiBOb3RpZmlrYWNpZURpc3BhdGNoZXIgIlBvc2t5dG5lIG9ic2FoIHNwcsOhdnkgbmEgcG9zbGFuaWUiCiAgICAgICAgTm90aWZpa2FjaWVDb250cm9sbGVyIC0+IFRlbXBsYXRlTWFuYWdlciAiUG/FvmlhZGEgbyBwb3XFvml0aWUgZGFuw6lobyB0ZW1wbGF0dSBwcmUgc3Byw6F2dSIKICAgICAgICBOb3RpZmlrYWNpZUNvbnRyb2xsZXIgLT4gTm90aWZpa2FjaWVEaXNwYXRjaGVyICJQb3NreXRuZSB6w61za2Fuw7ogYWRyZXN1IHogT3NvYnkgbW9kdWx1IgogICAgICAgIE5vdGlmaWthY2llQ29udHJvbGxlciAtPiBHZW5lcmF0b3JPYnNhaHVTcHJhdiAiUG9za3l0bmUgaW5mbyBvIHRlcm1pbmUvem5hbWtlIGt0b3LDqSBzw7ogb2JzYWhvbSBzcHLDoXZ5IgogICAgICAgIE5vdGlmaWthY2llRGlzcGF0Y2hlciAtPiBFeHROb3RpZiAiUG9za3l0dWplIHbFoWV0a3kgaW5mbyBuYSBuYSBvZG9zbGFuaWUgbm90aWZpa2FjaWUiCgogICAgICAgICNSZWxhdGlvbnNoaXBzIGluc2lkZSBUZXJtaW55TWFuYWdlcgogICAgICAgIFRlcm1pbnlEYXRhQ29udHJvbGxlciAtPiBOb3RpZmlrYXRvciAixb1pYWRhIG8gemFzbGFuaWUgbm90aWZpa2FjaWUgbyB0ZXJtaW5lIgogICAgICAgIFRlcm1pbnlEYXRhQ29udHJvbGxlciAtPiBUZXJtaW55REJDb250cm9sbGVyICJVa2xhZMOhIHRlcm3DrW55OyBaw61za2F2YSBpbmZvIG8gdGVybcOtbm9jaCIKICAgICAgICBUZXJtaW55RGF0YUNvbnRyb2xsZXIgLT4gS29uZmxpa3REZXRla3RvciAiVm9sw6Egb2jEvmFkb20ga29udHJvbHkgdGVybcOtbnUiCiAgICAgICAgVGVybWlueVVJIC0+IFRlcm1pbnlEYXRhQ29udHJvbGxlciAiUG9zaWVsYSDFvmlhZG9zdGkgbmEgbm92w70gdGVybcOtbiAvIHByaWhsw6FzZW5pZS9vZGhsw6FzZW5pZSDFvmlha2EgLyDFvWlhZGEgZGF0YSBvIHRlcm3DrW5vY2giCiAgICAgICAgSGxhc2VuaU5hVGVybWlueUNvbnRyb2xsZXIgLT4gVGVybWlueURCQ29udHJvbGxlciAiVWtsYWTDoSBpbmZvIG8gcHJpaMOhc2Vuw71jaCBzdHVkZW50b2NoIgogICAgICAgIENla2FjaUxpc3RpbmFDb250cm9sbGVyIC0+IFRlcm1pbnlEQkNvbnRyb2xsZXIgIlVrbGFkw6EgaW5mbyBvIHN0dWRlbnRvY2ggbmEgxI1ha2FjZWogbGlzdGluZSIKICAgICAgICBUZXJtaW55REJDb250cm9sbGVyIC0+IFRlcm1pbnlEQiAiVWtsYWTDoSB6bWVueSBkbyBkYXRhYsOhemUgLyDEjcOtdGEgREIiCiAgICAgICAgVGVybWlueURhdGFDb250cm9sbGVyIC0+IFRlcm1pbnlTeW5jZXIgIlBvc2llbGEgbm92w6kgdGVybcOtbnkiCiAgICAgICAgSGxhc2VuaU5hVGVybWlueUNvbnRyb2xsZXIgLT4gVGVybWlueVN5bmNlciAiUG9zaWVsYSBpbmZvcm3DoWNpZSBvIHByaWhsw6FzZW7DvWNoL29kaGzDoXNlbsO9Y2ggxaF0dWRlbnRvY2giCiAgICAgICAgVGVybWlueVN5bmNlciAtPiBabmFta3lNYW5hZ2VyICJQb3NpZWxhIGluZm9ybcOhY2lhIHByaSB2eXR2b3JlbsOtIG5vdsO9Y2ggdGVybcOtbm92IGEgcHJpaGzDoXNlbsOtL29kaGzDoXNlbsOtIMWhdHVkZW50b3YiCgogICAgICAgICMgUmVsYXRpb25zaGlwcyBpbnNpZGUgS29uZmxpa3REZXRla3RvcgogICAgICAgIFRlcm1pbnlNYW5hZ2VyIC0+IEtvbmZsaWt0RGV0ZWt0b3JGaW5kZXIgIlZvbMOhIGjEvmFkYW5pZSBrb25mbGlrdG92IgogICAgICAgIEtvbmZsaWt0RGV0ZWt0b3JGaW5kZXIgLT4gS29uZmxpa3REZXRla3RvckRCQ29udHJvbGxlciAiWsOtc2thdmEgZMOhdGEgbyB0ZXJtw61ub2NoIgogICAgICAgIEtvbmZsaWt0RGV0ZWt0b3JEQkNvbnRyb2xsZXIgLT4gVGVybWlueURCICLEjMOtdGEgZMOhdGEgbyB0ZXJtw61ub2NoIHogREIiCiAgICAgICAgS29uZmxpa3REZXRla3RvckZpbmRlciAtPiBLb25mbGlrdERldGVrdG9yUmVwb3J0ZXIgIlBvc2llbGEgdsO9c2xlZGt5IGjEvmFkYW5pYSBrb25mbGlrdG92IgogICAgICAgIEtvbmZsaWt0RGV0ZWt0b3JSZXBvcnRlciAtPiBUZXJtaW55VUkgIlBvc2llbGEgdsO9c2xlZGt5IGRldGVrY2llIGtvbmZsaWt0b3YiCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgU0lTRXhhbXMgIlNJU0V4YW1zU3lzdGVtRGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBTSVNFeGFtcyAiU0lTRXhhbXNDb250YWluZXJEaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgY29tcG9uZW50IFRlcm1pbnlNYW5hZ2VyICJUZXJtaW55TWFuYWdlckNvbXBvbmVudERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGV4Y2x1ZGUgWm5hbWt5TWFuYWdlci0+KgogICAgICAgICAgICBleGNsdWRlIEtvbmZsaWt0RGV0ZWt0b3ItPioKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBabmFta3lNYW5hZ2VyICJabmFta3lNYW5hZ2VyQ29tcG9uZW50RGlhZ3JhbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgZXhjbHVkZSBUZXJtaW55TWFuYWdlci0+Tm90aWZpa2F0b3IKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBOb3RpZmlrYXRvciAiTm90aWZpa2F0b3JDb21wb25lbnREaWFncmFtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBleGNsdWRlIFRlcm1pbnlNYW5hZ2VyLT5abmFta3lNYW5hZ2VyCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgS29uZmxpa3REZXRla3RvciAiS29uZmxpa3REZXRla3RvckNvbXBvbmVudERpYWdyYW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGV4Y2x1ZGUgVGVybWlueVVJLT5UZXJtaW55TWFuYWdlcgogICAgICAgICAgICBleGNsdWRlIFRlcm1pbnlNYW5hZ2VyLT5UZXJtaW55REIKICAgICAgICB9CgogICAgICAgIHRoZW1lIGRlZmF1bHQKCiAgICAgICAgc3R5bGVzIHsKICAgICAgICAgICAgZWxlbWVudCAiRXhpc3RpbmcgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICM5OTk5OTkKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjODI0M2Q1CiAgICAgICAgICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIldlYiBGcm9udC1FbmQiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzhhZDU0MwogICAgICAgICAgICAgICAgc2hhcGUgV2ViQnJvd3NlcgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKfQ=="
   },
   "views" : {
     "componentViews" : [ {
       "containerId" : "3",
       "dimensions" : {
-        "height" : 958,
-        "width" : 2608
+        "height" : 2516,
+        "width" : 3912
       },
       "elements" : [ {
-        "id" : "4",
+        "id" : "2",
         "x" : 1829,
-        "y" : 329
+        "y" : 208
+      }, {
+        "id" : "4",
+        "x" : 329,
+        "y" : 808
       }, {
         "id" : "5",
         "x" : 1079,
-        "y" : 329
+        "y" : 808
       }, {
         "id" : "6",
-        "x" : 329,
-        "y" : 329
+        "x" : 1829,
+        "y" : 808
+      }, {
+        "id" : "7",
+        "x" : 375,
+        "y" : 1420
+      }, {
+        "id" : "8",
+        "x" : 1737,
+        "y" : 1408
+      }, {
+        "id" : "9",
+        "x" : 375,
+        "y" : 1975
+      }, {
+        "id" : "10",
+        "x" : 2487,
+        "y" : 1408
+      }, {
+        "id" : "15",
+        "x" : 1737,
+        "y" : 2008
+      }, {
+        "id" : "22",
+        "x" : 3237,
+        "y" : 1408
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "TerminyManagerComponentDiagram",
       "order" : 3,
-      "paperSize" : "A4_Landscape"
-    }, {
-      "containerId" : "7",
-      "dimensions" : {
-        "height" : 958,
-        "width" : 1858
-      },
-      "elements" : [ {
-        "id" : "8",
-        "x" : 329,
-        "y" : 329
+      "paperSize" : "A3_Landscape",
+      "relationships" : [ {
+        "id" : "72"
       }, {
-        "id" : "9",
-        "x" : 1079,
-        "y" : 329
-      } ],
-      "externalContainerBoundariesVisible" : false,
-      "key" : "TerminyDBComponentDiagram",
-      "order" : 4,
-      "paperSize" : "A5_Landscape"
+        "id" : "73"
+      }, {
+        "id" : "74"
+      }, {
+        "id" : "75"
+      }, {
+        "id" : "76"
+      }, {
+        "id" : "77"
+      }, {
+        "id" : "78"
+      }, {
+        "id" : "79"
+      }, {
+        "id" : "80"
+      }, {
+        "id" : "81"
+      } ]
     }, {
-      "containerId" : "12",
+      "containerId" : "15",
       "dimensions" : {
-        "height" : 1454,
-        "width" : 1616
+        "height" : 2062,
+        "width" : 3116
       },
       "elements" : [ {
-        "id" : "13",
-        "x" : 583,
+        "id" : "3",
+        "x" : 208,
         "y" : 329
       }, {
         "id" : "14",
         "x" : 208,
         "y" : 929
       }, {
-        "id" : "17",
+        "id" : "16",
         "x" : 958,
         "y" : 929
+      }, {
+        "id" : "17",
+        "x" : 1708,
+        "y" : 329
+      }, {
+        "id" : "18",
+        "x" : 958,
+        "y" : 329
+      }, {
+        "id" : "19",
+        "x" : 2458,
+        "y" : 633
+      }, {
+        "id" : "22",
+        "x" : 1708,
+        "y" : 1537
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "ZnamkyManagerComponentDiagram",
-      "order" : 5,
-      "paperSize" : "A5_Landscape",
+      "order" : 4,
+      "paperSize" : "A4_Landscape",
       "relationships" : [ {
-        "id" : "48"
+        "id" : "58"
       }, {
-        "id" : "49"
+        "id" : "59"
+      }, {
+        "id" : "60"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "63",
+        "vertices" : [ {
+          "x" : 1708,
+          "y" : 779
+        } ]
+      } ]
+    }, {
+      "containerId" : "22",
+      "dimensions" : {
+        "height" : 2070,
+        "width" : 4616
+      },
+      "elements" : [ {
+        "id" : "3",
+        "x" : 208,
+        "y" : 491
+      }, {
+        "id" : "15",
+        "x" : 208,
+        "y" : 1091
+      }, {
+        "id" : "23",
+        "x" : 2458,
+        "y" : 637
+      }, {
+        "id" : "24",
+        "x" : 1708,
+        "y" : 637
+      }, {
+        "id" : "25",
+        "x" : 3208,
+        "y" : 483
+      }, {
+        "id" : "26",
+        "x" : 958,
+        "y" : 791
+      }, {
+        "id" : "27",
+        "x" : 3958,
+        "y" : 483
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "NotifikatorComponentDiagram",
+      "order" : 5,
+      "paperSize" : "A3_Landscape",
+      "relationships" : [ {
+        "id" : "64"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "67"
+      }, {
+        "id" : "68"
+      }, {
+        "id" : "69",
+        "vertices" : [ {
+          "x" : 1708,
+          "y" : 487
+        }, {
+          "x" : 2908,
+          "y" : 487
+        } ]
+      }, {
+        "id" : "70",
+        "vertices" : [ {
+          "x" : 1708,
+          "y" : 1087
+        }, {
+          "x" : 2158,
+          "y" : 1087
+        } ]
+      }, {
+        "id" : "71"
+      } ]
+    }, {
+      "containerId" : "10",
+      "dimensions" : {
+        "height" : 2516,
+        "width" : 1858
+      },
+      "elements" : [ {
+        "id" : "2",
+        "x" : 1079,
+        "y" : 2008
+      }, {
+        "id" : "3",
+        "x" : 704,
+        "y" : 208
+      }, {
+        "id" : "9",
+        "x" : 329,
+        "y" : 2008
+      }, {
+        "id" : "11",
+        "x" : 329,
+        "y" : 1408
+      }, {
+        "id" : "12",
+        "x" : 704,
+        "y" : 808
+      }, {
+        "id" : "13",
+        "x" : 1079,
+        "y" : 1408
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "KonfliktDetektorComponentDiagram",
+      "order" : 6,
+      "paperSize" : "A4_Portrait",
+      "relationships" : [ {
+        "id" : "82"
+      }, {
+        "id" : "83"
+      }, {
+        "id" : "84"
+      }, {
+        "id" : "85"
+      }, {
+        "id" : "86"
       } ]
     } ],
     "configuration" : {
@@ -561,132 +1092,117 @@
     },
     "containerViews" : [ {
       "dimensions" : {
-        "height" : 3462,
-        "width" : 5166
+        "height" : 3571,
+        "width" : 3420
       },
       "elements" : [ {
         "id" : "2",
-        "x" : 3105,
-        "y" : 995
+        "x" : 519,
+        "y" : 1030
       }, {
         "id" : "3",
-        "x" : 3329,
-        "y" : 1633
+        "x" : 239,
+        "y" : 1895
       }, {
-        "id" : "7",
-        "x" : 3537,
-        "y" : 2233
+        "id" : "9",
+        "x" : 239,
+        "y" : 2880
       }, {
         "id" : "10",
-        "x" : 4170,
-        "y" : 1555
-      }, {
-        "id" : "11",
-        "x" : 1345,
-        "y" : 1035
-      }, {
-        "id" : "12",
-        "x" : 860,
-        "y" : 1525
+        "x" : 999,
+        "y" : 1895
       }, {
         "id" : "14",
-        "x" : 500,
-        "y" : 2185
+        "x" : 2709,
+        "y" : 1030
       }, {
         "id" : "15",
-        "x" : 2105,
-        "y" : 1685
+        "x" : 2724,
+        "y" : 2190
       }, {
-        "id" : "16",
-        "x" : 2105,
-        "y" : 1120
-      }, {
-        "id" : "17",
-        "x" : 2096,
-        "y" : 2233
-      }, {
-        "id" : "18",
-        "x" : 2096,
-        "y" : 2833
+        "id" : "19",
+        "x" : 2729,
+        "y" : 2890
       }, {
         "id" : "20",
-        "x" : 1730,
-        "y" : 145
+        "x" : 1719,
+        "y" : 1705
       }, {
         "id" : "21",
-        "x" : 2600,
-        "y" : 135
+        "x" : 1734,
+        "y" : 1130
+      }, {
+        "id" : "22",
+        "x" : 1584,
+        "y" : 2430
+      }, {
+        "id" : "27",
+        "x" : 1584,
+        "y" : 2980
+      }, {
+        "id" : "29",
+        "x" : 529,
+        "y" : 200
+      }, {
+        "id" : "30",
+        "x" : 2299,
+        "y" : 380
       } ],
       "externalSoftwareSystemBoundariesVisible" : false,
       "key" : "SISExamsContainerDiagram",
       "order" : 2,
-      "paperSize" : "A2_Landscape",
       "relationships" : [ {
-        "id" : "28"
+        "id" : "37"
       }, {
-        "id" : "29"
-      }, {
-        "id" : "30",
-        "vertices" : [ {
-          "x" : 2220,
-          "y" : 745
-        } ]
-      }, {
-        "id" : "31"
-      }, {
-        "id" : "33"
-      }, {
-        "id" : "34"
-      }, {
-        "id" : "35"
-      }, {
-        "id" : "36",
-        "vertices" : [ {
-          "x" : 4055,
-          "y" : 2005
-        } ]
-      }, {
-        "id" : "37",
-        "vertices" : [ {
-          "x" : 3970,
-          "y" : 1730
-        } ]
-      }, {
-        "id" : "38",
-        "vertices" : [ {
-          "x" : 3312,
-          "y" : 1933
-        } ]
+        "id" : "38"
       }, {
         "id" : "39"
       }, {
         "id" : "40"
       }, {
-        "id" : "41"
+        "id" : "42"
       }, {
-        "id" : "42",
-        "vertices" : [ {
-          "x" : 1715,
-          "y" : 1635
-        } ]
-      }, {
-        "id" : "43",
-        "vertices" : [ {
-          "x" : 1664,
-          "y" : 1365
-        } ]
+        "id" : "43"
       }, {
         "id" : "44"
       }, {
         "id" : "45"
       }, {
-        "id" : "46",
+        "id" : "46"
+      }, {
+        "id" : "47",
         "vertices" : [ {
-          "x" : 1437,
-          "y" : 1933
+          "x" : 949,
+          "y" : 2450
         } ]
       }, {
-        "id" : "47"
+        "id" : "48"
+      }, {
+        "id" : "49"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "51",
+        "vertices" : [ {
+          "x" : 2534,
+          "y" : 1680
+        } ]
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "54"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "57",
+        "vertices" : [ {
+          "x" : 984,
+          "y" : 2295
+        } ]
       } ],
       "softwareSystemId" : "1"
     } ],
@@ -700,19 +1216,19 @@
         "x" : 949,
         "y" : 800
       }, {
-        "id" : "19",
+        "id" : "28",
         "x" : 1699,
         "y" : 800
       }, {
-        "id" : "20",
+        "id" : "29",
         "x" : 960,
         "y" : 50
       }, {
-        "id" : "21",
+        "id" : "30",
         "x" : 155,
         "y" : 655
       }, {
-        "id" : "22",
+        "id" : "31",
         "x" : 970,
         "y" : 1340
       } ],
@@ -720,33 +1236,33 @@
       "key" : "SISExamsSystemDiagram",
       "order" : 1,
       "relationships" : [ {
-        "id" : "23",
+        "id" : "32",
         "vertices" : [ {
           "x" : 1380,
           "y" : 590
         } ]
       }, {
-        "id" : "24",
+        "id" : "33",
         "vertices" : [ {
           "x" : 880,
           "y" : 630
         } ]
       }, {
-        "id" : "25",
+        "id" : "34",
         "vertices" : [ {
           "x" : 796,
           "y" : 1124
         } ]
       }, {
-        "id" : "26",
+        "id" : "35",
         "vertices" : [ {
           "x" : 776,
           "y" : 825
         } ]
       }, {
-        "id" : "27"
+        "id" : "36"
       }, {
-        "id" : "32"
+        "id" : "41"
       } ],
       "softwareSystemId" : "1"
     } ]
