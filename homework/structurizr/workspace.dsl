@@ -60,23 +60,31 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         ucitel -> ZnamkyUI "Zapisuje známky"
         student -> ZnamkyUI "Čte výsledky zkoušek"
         student -> TerminyUI "Zapisuje si zkoušky"
+        manazer -> TerminyUI "Zobrazuje statistiky"
+        manazer -> ZnamkyUI "Zobrazuje statistiky"
 
         # Relationships between SW Systems
         SISExams -> SIS "API na zistení a zápis dat"
 
         # Relationships inside SISExams
-        TerminyUI -> TerminyManager
+        TerminyUI -> TerminyManager "Získává data o termínech"
+        TerminyUI -> TerminyManager "Posílá žádosti o přihlášení / odhlášení / vytvoření termínu"
         TerminyManager -> TerminyDB "Ukladanie termínov"
         KonfliktDetektor -> TerminyUI "Posiela výsledky detekcie konfliktov"
         KonfliktDetektor -> TerminyDB "Číta informácie o termínoch"
         TerminyManager -> KonfliktDetektor "Volá detekciu konfliktov"
         TerminyManager -> Notifikator "Pri zmene/pridani terminu žiada o poslanie notifikacie"
-        TerminyUI -> Osoby
-        TerminyUI -> Predmety
+        TerminyUI -> Osoby "Zobrazí studenty na termínu"
+        TerminyUI -> Osoby "Zobrazí zkoušející učitele na termínu"
+        TerminyUI -> Predmety "Získá seznam vybraných předmětů"
+        TerminyUI -> Predmety "Získá informace o předmětu"
         ZnamkyUI -> ZnamkyManager "Pri zmene známky žiada o poslanie notifikacie"
+        ZnamkyUI -> ZnamkyManager "Získává data o známkách"
+        ZnamkyUI -> ZnamkyManager "Posílá žádosti o změny známek"
         ZnamkyUI -> Osoby "Zobraziť študentovi jeho hodnotenie"
         ZnamkyUI -> Osoby "Zobrazit ucitelovi tabulku s hodnotenim studentov"
-        ZnamkyUI -> Predmety
+        ZnamkyUI -> Predmety "Získá seznam vybraných předmětů"
+        ZnamkyUI -> Predmety "Získá informace o předmětu"
         ZnamkyManager -> ZnamkyDB "Zapísať / Zmeniť hodnotenie"
         ZnamkyManager -> Notifikator "Posiela notifikácie pri zmene známky"
         Notifikator -> ExtNotif "Posiela hotové notifikácie na odoslanie"
