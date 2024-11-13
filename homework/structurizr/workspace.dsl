@@ -285,6 +285,25 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         }
 
         dynamic SISExams {
+            title "Vypsání termínu zkoušky"
+            ucitel -> TerminyUI "Učitel se přihlásí do systému a vyžádá si zobrazení termínů zkoušek"
+            TerminyUI -> Osoby "Získá informace o učitelovi"
+            TerminyUI -> Predmety "Získá seznam předmětů pro učitele"
+            TerminyUI -> TerminyManager "Požádá o data termínů zkoušek pro učitele"
+            TerminyManager -> TerminyDB "Získá data o termínech zkoušek"
+            TerminyManager -> TerminyUI "Pošle data o termínech zkoušek pro zobrazení"
+            TerminyUI -> ucitel "Zobrazí termíny zkoušek učitelovi"
+            ucitel -> TerminyUI "Učitel si vyžádá zobrazení formuláře pro nový termín zkoušky"
+            TerminyUI -> ucitel "Zobrazí formulář pro nový termín zkoušky"
+            ucitel -> TerminyUI "Učitel vyplní formulář s informacemi o termínu"
+            TerminyUI -> TerminyManager "Pošle požadavek na vytvoření termínu zkoušky"
+            TerminyManager -> KonfliktDetektor "Požádá o kontrolu konfliktů termínů zkoušek"
+            KonfliktDetektor -> TerminyUI "V případě nalezení konfliktu pošle informaci o konfliktu"
+            TerminyManager -> TerminyDB "Vytvoří nový termín zkoušky od učitele"
+            TerminyUI -> ucitel "Zobrazí potvrzení o vytvoření termínu zkoušky"
+        }
+
+        dynamic SISExams {
             title "Zápis studenta na termín zkoušky"
             student -> TerminyUI "Student se přihlásí do systému a vyžádá si zobrazení termínů zkoušek"
             TerminyUI -> Osoby "Získá informace o studentovi"
