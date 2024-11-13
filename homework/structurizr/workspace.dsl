@@ -5,7 +5,10 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         SISExams = softwareSystem "Zkoušky v rámci SIS" "Spravuje vytvareni zkousek, zapis studentu a monitoruje jejich vysledky" {
 
             Group "Termíny zkoušek" {
-                TerminyUI = container "Termíny UI" "Zobrazí UI na termíny pre učitele a študenty" "" "Web Front-End"
+                TerminyUI = container "Termíny UI" "Zobrazí UI na termíny pre učitele a študenty" "" "Web Front-End" {
+                    TerminyWebApp = component "Termíny Web App" "Umožňuje interakci s termíny zkoušek"
+                    TerminyUIServer = component "Termíny UI Server" "Serverová část pro zobrazování termínů zkoušek"
+                }
                 TerminyManager = container "Termíny Manager" "Rieši veci okolo termínov (vnútorné členenie na minimálne čakačku a prihlasovanie); posiela notifikácie pri zmenách; komunikuje s DB" {
                     CekaciListinaController = component "Čekací Listina Controller" "Prihlásenie na čakaciu listiny; Odhlásanie z čakacej listiny"
                     HlaseniNaTerminyController = component "Hlášení na termíny Controller" "Prihlásenie na termín; Odhlásenie z termínu"
@@ -22,7 +25,10 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             }
             
             Group "Známkování" {
-                ZnamkyUI = container "Známky UI" "Zobrazí UI na známky pre učitele a študenty" "" "Web Front-End"
+                ZnamkyUI = container "Známky UI" "Zobrazí UI na známky pre učitele a študenty" "" "Web Front-End" {
+                    ZnamkyWebApp = component "Známky Web App" "Umožňuje interakci se známkami"
+                    ZnamkyUIServer = component "Známky UI Server" "Serverová část pro zobrazování známek"
+                }
                 ZnamkyManager = container "Známky Manager" "Rieši veci okolo známok (zapisovanie, pozeranie, ...); posiela notifikácie pri zmenách; treba spojeni so známky managerom pre prípad, že termín vyžaduje zápočet; komunikuje s DB" {
                     ZnamkyDataController = component "Známky Data Controller" "Čte a zapisuje známky, při změně žádá o notifikaci"
                     ZnamkyDBController = component "Známky DB Controller" "Komunikácia s databázou na známky"
@@ -126,6 +132,37 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         KonfliktDetektorDBController -> TerminyDB "Číta dáta o termínoch z DB"
         KonfliktDetektorFinder -> KonfliktDetektorReporter "Posiela výsledky hľadania konfliktov"
         KonfliktDetektorReporter -> TerminyUI "Posiela výsledky detekcie konfliktov"
+
+        # Relationships inside TerminyUI
+        TerminyWebApp -> TerminyUIServer "Žádá o UI termínů zkoušek"
+        TerminyWebApp -> TerminyUIServer "Posílá požadavky na změnu dat termínů"
+        TerminyUIServer -> TerminyManager "Získává data o termínech"
+        TerminyUIServer -> TerminyManager "Posílá žádosti o přihlášení / odhlášení / vytvoření termínu"
+        manazer -> TerminyWebApp "Zobrazuje statistiky"
+        student -> TerminyWebApp "Zapisuje si zkoušky"
+        student -> TerminyWebApp "Čte výsledky zkoušek"
+        ucitel -> TerminyWebApp "Vytváří a zobrazuje termíny"
+        ucitel -> TerminyWebApp "Zobrazení termínu"
+        KonfliktDetektor -> TerminyUIServer "Posiela výsledky detekcie konfliktov"
+        TerminyUIServer -> Osoby "Zobrazí studenty na termínu"
+        TerminyUIServer -> Osoby "Zobrazí zkoušející učitele na termínu"
+        TerminyUIServer -> Predmety "Získá seznam vybraných předmětů"
+        TerminyUIServer -> Predmety "Získá informace o předmětu"
+
+        # Relationships inside ZnamkyUI
+        ZnamkyWebApp -> ZnamkyUIServer "Žádá o UI známek"
+        ZnamkyWebApp -> ZnamkyUIServer "Posílá požadavky na změnu známek"
+        ZnamkyUIServer -> ZnamkyManager "Získává data o známkách"
+        ZnamkyUIServer -> ZnamkyManager "Posílá žádosti o změny známek"
+        ZnamkyUIServer -> ZnamkyManager "Pri zmene známky žiada o poslanie notifikacie"
+        manazer -> ZnamkyWebApp "Zobrazuje statistiky"
+        student -> ZnamkyWebApp "Čte výsledky zkoušek"
+        student -> ZnamkyWebApp "Zapisuje si zkoušky"
+        ucitel -> ZnamkyWebApp "Zapisuje známky"
+        ucitel -> ZnamkyWebApp "Zobrazuje známky"
+        ZnamkyUIServer -> Osoby "Získá informace o osobách pro zobrazení známek"
+        ZnamkyUIServer -> Predmety "Získá seznam vybraných předmětů"
+        ZnamkyUIServer -> Predmety "Získá informace o předmětu"
     }
 
     views {
@@ -157,6 +194,15 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             include *
             exclude TerminyUI->TerminyManager
             exclude TerminyManager->TerminyDB
+        }
+
+        component TerminyUI "TerminyUIComponentDiagram" {
+            include *
+            exclude TerminyManager->KonfliktDetektor
+        }
+
+        component ZnamkyUI "ZnamkyUIComponentDiagram" {
+            include *
         }
 
         theme default
