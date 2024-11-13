@@ -323,6 +323,24 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             TerminyUI -> student "Zobrazí potvrzení o zápisu studenta na termín zkoušky"
         }
 
+        dynamic SISExams {
+            title "Zápis a zmena známky"
+            ucitel -> ZnamkyUI "Učitel se přihlásí do systému a vyžádá si zobrazení seznamu studentů pro zápis známek"
+            ZnamkyUI -> Predmety "Získá seznam předmětů vyučovaných učitelem"
+            ZnamkyUI -> ucitel "Zobrazí seznam vyučovaných předmětů"
+            ucitel -> ZnamkyUI "Vybere předmět, z kterého chce známku zapsat/změnit"
+            ZnamkyUI -> ZnamkyManager "Požádá o data známek studentů z vybraného předmětu"
+            ZnamkyManager -> ZnamkyDB "Získá data o aktuálních známkách studentů"
+            ZnamkyManager -> ZnamkyUI "Pošle data o známkách studentů pro zobrazení"
+            ZnamkyUI -> ucitel "Zobrazí seznam studentů pro zápis/změnu známek"
+            ucitel -> ZnamkyUI "Učitel vybere studenta a zadá známku"
+            ZnamkyUI -> ZnamkyManager "Pošle požadavek na zápis/změnu známky pro studenta"
+            ZnamkyManager -> ZnamkyDB "Zapíše novou známku pro studenta"
+            ZnamkyManager -> Notifikator "Pošle požadavek na notifikaci o změně známky"
+            Notifikator -> ExtNotif "Posílá notifikaci studentovi o zapsané známce"
+            ZnamkyUI -> ucitel "Zobrazí potvrzení o zápisu známky"
+        }
+
         theme default
 
         styles {
