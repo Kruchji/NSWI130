@@ -283,6 +283,26 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             include *
         }
 
+        dynamic SISExams {
+            title "Zápis studenta na termín zkoušky"
+            student -> TerminyUI "Student se přihlásí do systému a vyžádá si zobrazení termínů zkoušek"
+            TerminyUI -> Osoby "Získá informace o studentovi"
+            TerminyUI -> Predmety "Získá seznam předmětů pro studenta"
+            TerminyUI -> TerminyManager "Požádá o data termínů zkoušek pro studenta"
+            TerminyManager -> TerminyDB "Získá data o termínech zkoušek"
+            TerminyManager -> TerminyUI "Pošle data o termínech zkoušek pro zobrazení"
+            TerminyUI -> student "Zobrazí termíny zkoušek studentovi"
+            student -> TerminyUI "Student může filtrovat zobrazené termíny zkoušek"
+            student -> TerminyUI "Student si vybere termín zkoušky a zobrazí podrobností"
+            TerminyUI -> student "Zobrazí podrobnosti o termínu zkoušky s možností zápisu"
+            student -> TerminyUI "Student se zapíše na termín zkoušky"
+            TerminyUI -> TerminyManager "Pošle požadavek na zápis studenta na termín zkoušky"
+            TerminyManager -> KonfliktDetektor "Požádá o kontrolu konfliktů termínů zkoušek"
+            KonfliktDetektor -> TerminyUI "V případě nalezení konfliktu pošle informaci o konfliktu"
+            TerminyManager -> TerminyDB "Zapíše studenta na termín zkoušky"
+            TerminyUI -> student "Zobrazí potvrzení o zápisu studenta na termín zkoušky"
+        }
+
         theme default
 
         styles {
