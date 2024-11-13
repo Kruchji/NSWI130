@@ -3,6 +3,7 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
     model {
         # SW Systems
         SISExams = softwareSystem "Zkoušky v rámci SIS" "Spravuje vytvareni zkousek, zapis studentu a monitoruje jejich vysledky" {
+            !docs docs
 
             Group "Termíny zkoušek" {
                 TerminyUI = container "Termíny UI" "Zobrazí UI na termíny pre učitele a študenty" "" "Web Front-End" {
