@@ -163,6 +163,76 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         ZnamkyUIServer -> Osoby "Získá informace o osobách pro zobrazení známek"
         ZnamkyUIServer -> Predmety "Získá seznam vybraných předmětů"
         ZnamkyUIServer -> Predmety "Získá informace o předmětu"
+
+        deploymentEnvironment "Production" {
+            deploymentNode "Full Termíny Deployment" "" "" {
+                deploymentNode "Termíny UI" "" "" {
+                    TerminyUIInstance = containerInstance TerminyUI
+                }
+                deploymentNode "Termíny Managers and Analyzers" "" "" {
+                    deploymentNode "Termíny Manager" "" "" {
+                        TerminyManagerInstance = containerInstance TerminyManager
+                    }
+                    deploymentNode "Konflikt Detektor" "" "" {
+                        KonfliktDetektorInstance = containerInstance KonfliktDetektor
+                    }
+                }
+                deploymentNode "Termíny DB" "" "" {
+                    TerminyDBInstance = containerInstance TerminyDB
+                }
+            }
+            
+            deploymentNode "Full Známky Deployment" "" "" {
+                deploymentNode "Známky UI" "" "" {
+                    ZnamkyUIInstance = containerInstance ZnamkyUI
+                }
+                deploymentNode "Známky Managers and Analyzers" "" "" {
+                    deploymentNode "Známky Manager" "" "" {
+                        ZnamkyManagerInstance = containerInstance ZnamkyManager
+                    }
+                }
+                deploymentNode "Známky DB" "" "" {
+                    ZnamkyDBInstance = containerInstance ZnamkyDB
+                }
+            }
+
+            deploymentNode "Notifikátor" "" "" {
+                NotifikatorInstance = containerInstance Notifikator
+            }
+        }
+
+        deploymentEnvironment "Development" {
+            deploymentNode "Termíny Deployment" "" "" {
+                deploymentNode "Termíny UI" "" "" {
+                    TerminyUIDevInstance = containerInstance TerminyUI
+                }
+                deploymentNode "Termíny Managers and Analyzers" "" "" {
+                    deploymentNode "Termíny Manager" "" "" {
+                        TerminyManagerDevInstance = containerInstance TerminyManager
+                    }
+                    deploymentNode "Konflikt Detektor" "" "" {
+                        KonfliktDetektorDevInstance = containerInstance KonfliktDetektor
+                    }
+                }
+            }
+            
+            deploymentNode "Známky Deployment" "" "" {
+                deploymentNode "Známky UI" "" "" {
+                    ZnamkyUIDevInstance = containerInstance ZnamkyUI
+                }
+                deploymentNode "Známky Managers and Analyzers" "" "" {
+                    deploymentNode "Známky Manager" "" "" {
+                        ZnamkyManagerDevInstance = containerInstance ZnamkyManager
+                    }
+                }
+                
+            }
+
+            deploymentNode "Mock DB pro Známky i Termíny" "" "" {
+                ZnamkyDBDevInstance = containerInstance ZnamkyDB
+                TerminyDBDevInstance = containerInstance TerminyDB
+            }
+        }
     }
 
     views {
@@ -202,6 +272,14 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         }
 
         component ZnamkyUI "ZnamkyUIComponentDiagram" {
+            include *
+        }
+
+        deployment SISExams "Production" "Production" {
+            include *
+        }
+
+        deployment SISExams "Development" "Development" {
             include *
         }
 
