@@ -341,6 +341,21 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             ZnamkyUI -> ucitel "Zobrazí potvrzení o zápisu známky"
         }
 
+        dynamic SISExams {
+            title "Odhlášení studenta z termínu zkoušky"
+            student -> TerminyUI "Student se přihlásí do systému a vyžádá si zobrazení svých termínů zkoušek"
+            TerminyUI -> TerminyManager "Požádá o data termínů zkoušek, na které je student přihlášený"
+            TerminyManager -> TerminyDB "Získá data o termínech zkoušek"
+            TerminyManager -> TerminyUI "Pošle data o termínech zkoušek pro zobrazení"
+            TerminyUI -> student "Zobrazí termíny zkoušek studentovi"
+            student -> TerminyUI "Student si vybere termín zkoušky a zobrazí podrobností"
+            TerminyUI -> student "Zobrazí podrobnosti o termínu zkoušky s možností odhlášení"
+            student -> TerminyUI "Student se odhlásí z termínu zkoušky"
+            TerminyUI -> TerminyManager "Pošle požadavek na odhlášení studenta z termínu zkoušky"
+            TerminyManager -> TerminyDB "Odhlásí studenta z termínu zkoušky"
+            TerminyUI -> student "Zobrazí potvrzení o odhlášení studenta z termínu zkoušky"
+        }
+
         theme default
 
         styles {
