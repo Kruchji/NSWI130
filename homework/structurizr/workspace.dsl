@@ -166,39 +166,39 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         ZnamkyUIServer -> Predmety "Získá informace o předmětu"
 
         deploymentEnvironment "Production" {
-            deploymentNode "Full Termíny Deployment" "" "" {
-                deploymentNode "Termíny UI" "" "" {
-                    TerminyUIInstance = containerInstance TerminyUI
-                }
-                deploymentNode "Termíny Managers and Analyzers" "" "" {
-                    deploymentNode "Termíny Manager" "" "" {
-                        TerminyManagerInstance = containerInstance TerminyManager
-                    }
-                    deploymentNode "Konflikt Detektor" "" "" {
-                        KonfliktDetektorInstance = containerInstance KonfliktDetektor
-                    }
-                }
-                deploymentNode "Termíny DB" "" "" {
-                    TerminyDBInstance = containerInstance TerminyDB
-                }
-            }
             
-            deploymentNode "Full Známky Deployment" "" "" {
-                deploymentNode "Známky UI" "" "" {
+            deploymentNode "Školský server" "" "Multiple devices with linux"{
+                deploymentNode "Termíny Managers and Analyzers" "" "Java" {
+                    TerminyManagerInstance = containerInstance TerminyManager
+                    
+                    KonfliktDetektorInstance = containerInstance KonfliktDetektor
+                }
+                
+                deploymentNode "Local Server" "" "Ubuntu 24.04.01 LTS"{
+                    deploymentNode "Termíny DB" "" "MySQL" {
+                        TerminyDBInstance = containerInstance TerminyDB
+                    }
+                    
+                    deploymentNode "Známky DB" "" "MySQL" {
+                        ZnamkyDBInstance = containerInstance ZnamkyDB
+                    }
+                }
+                
+                
+
+                deploymentNode "Známky Managers and Analyzers" "" "Java" {
+                    ZnamkyManagerInstance = containerInstance ZnamkyManager
+                }
+    
+                deploymentNode "Notifikátor" "" "php a python" {
+                    NotifikatorInstance = containerInstance Notifikator
+                }
+                
+                deploymentNode "SIS webapp" "" "React, Node.js" {
+                    TerminyUIInstance = containerInstance TerminyUI
+    
                     ZnamkyUIInstance = containerInstance ZnamkyUI
                 }
-                deploymentNode "Známky Managers and Analyzers" "" "" {
-                    deploymentNode "Známky Manager" "" "" {
-                        ZnamkyManagerInstance = containerInstance ZnamkyManager
-                    }
-                }
-                deploymentNode "Známky DB" "" "" {
-                    ZnamkyDBInstance = containerInstance ZnamkyDB
-                }
-            }
-
-            deploymentNode "Notifikátor" "" "" {
-                NotifikatorInstance = containerInstance Notifikator
             }
         }
 
