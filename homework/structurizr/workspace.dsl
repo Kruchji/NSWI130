@@ -9,6 +9,8 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
                 TerminyUI = container "Termíny UI" "Zobrazí UI na termíny pre učitele a študenty" "" "Web Front-End" {
                     TerminyWebApp = component "Termíny Web App" "Umožňuje interakci s termíny zkoušek"
                     TerminyUIServer = component "Termíny UI Server" "Serverová část pro zobrazování termínů zkoušek"
+                    OsobyControllerVTerminoch = component "Osoby Controller" "Komunikácia s externým modulom Osoby"
+                    PredmetyControllerVTerminoch = component "Predmety Controller" "Komunikácia s externým modulom Predmety"
                 }
                 TerminyManager = container "Termíny Manager" "Rieši veci okolo termínov (vnútorné členenie na minimálne čakačku a prihlasovanie); posiela notifikácie pri zmenách; komunikuje s DB" {
                     CekaciListinaController = component "Čekací Listina Controller" "Prihlásenie na čakaciu listiny; Odhlásanie z čakacej listiny"
@@ -16,6 +18,7 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
                     TerminyDataController = component "Termíny Data Controller" "Vytvorenie termínu; Úprava termínu"
                     TerminyDBController = component "Termíny DB Controller" "Komunikácia s databázou na termíny"
                     TerminySyncer = component "Synchronizácia termínov" "Posiela informácie o zmenách v termínoch pre použitie v ZnamkyDB"
+                    TerminyModel = component "Termíny Model" "Stará sa o logiku dát"
                 }
                 TerminyDB = container "TermínyDB" "Ukladá info o termínoch, prihlásených studentech, čakajúcich studentech" "" "Database"
                 KonfliktDetektor = container "Konflikt Detektor" "Volá ho termíny manager, detekuje konflikty, reportuje stav termíny UI" {
@@ -29,11 +32,14 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
                 ZnamkyUI = container "Známky UI" "Zobrazí UI na známky pre učitele a študenty" "" "Web Front-End" {
                     ZnamkyWebApp = component "Známky Web App" "Umožňuje interakci se známkami"
                     ZnamkyUIServer = component "Známky UI Server" "Serverová část pro zobrazování známek"
+                    OsobyControllerVZnamkach = component "Osoby Controller" "Komunikácia s externým modulom Osoby"
+                    PredmetyControllerVZnamkach = component "Predmety Controller" "Komunikácia s externým modulom Predmety"
                 }
                 ZnamkyManager = container "Známky Manager" "Rieši veci okolo známok (zapisovanie, pozeranie, ...); posiela notifikácie pri zmenách; treba spojeni so známky managerom pre prípad, že termín vyžaduje zápočet; komunikuje s DB" {
                     ZnamkyDataController = component "Známky Data Controller" "Čte a zapisuje známky, při změně žádá o notifikaci"
                     ZnamkyDBController = component "Známky DB Controller" "Komunikácia s databázou na známky"
                     ZnamkySyncer = component "Synchronizuje termíny" "Vytvára nové termíny v DB, ukladá informácie o prihlásených termínoch študenta"
+                    ZnamkyModel = component "Známky Model" "Stará sa o logiku dát"
                 }
                 ZnamkyDB = container "Známky DB" "Ukladá hodnotenie študenta aj s históriou v rámci jedného predmetu" "" "Database"
             }
@@ -98,12 +104,13 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         TerminyManager -> ZnamkyManager "Synchronizuje termíny medzi DB"
 
         # Relationships inside ZnamkyManager
-        ZnamkyDataController -> ZnamkyDBController "Ukladá známky / Získava známky"
+        ZnamkyDataController -> ZnamkyModel "Žiada o uloženie / čítanie dát"
         ZnamkyDataController -> Notifikator "Posiela žiadosť o notifikáciu"
         ZnamkyDBController -> ZnamkyDB "Ukladá zmeny do databáze / číta DB"
         ZnamkyUI -> ZnamkyDataController "Posiela žiadosti o zmenu známky / získava informácie o známkach"
         TerminyManager -> ZnamkySyncer "Príjma informácie z termínov"
-        ZnamkySyncer -> ZnamkyDB "Ukladá dáta do DB"
+        ZnamkySyncer -> ZnamkyModel "Žiada o zmenu dát"
+        ZnamkyModel -> ZnamkyDBController "Žiada o uloženie / čítanie dát"
 
         #Relationships inside Notifikator
         TerminyManager -> NotifikacieController "Posiela žiadosť o notifikáciu"
@@ -117,11 +124,14 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
 
         #Relationships inside TerminyManager
         TerminyDataController -> Notifikator "Žiada o zaslanie notifikacie o termine"
-        TerminyDataController -> TerminyDBController "Ukladá termíny; Získava info o termínoch"
         TerminyDataController -> KonfliktDetektor "Volá ohľadom kontroly termínu"
-        TerminyUI -> TerminyDataController "Posiela žiadosti na nový termín / prihlásenie/odhlásenie žiaka / Žiada data o termínoch"
-        HlaseniNaTerminyController -> TerminyDBController "Ukladá info o prihásených studentoch"
-        CekaciListinaController -> TerminyDBController "Ukladá info o studentoch na čakacej listine"
+        TerminyUI -> TerminyDataController "Posiela žiadosti na nový termín / úpravu"
+        TerminyUI -> HlaseniNaTerminyController "Posiela žiadost na prihlásenie/odhlásenie"
+        TerminyUI -> CekaciListinaController "Posiela žiadost na prihlásenie/odhlásenie z čakacej listiny"
+        TerminyDataController -> TerminyModel "Žiada o zmeny v DB ohľadom termínov" 
+        HlaseniNaTerminyController -> TerminyModel "Žiada o uloženie info o prihásených študentoch"
+        CekaciListinaController -> TerminyModel "Žiada o uloženie info o studentoch na čakacej listine"
+        TerminyModel -> TerminyDBController "Žiada o ukladanie / čítanie dát"
         TerminyDBController -> TerminyDB "Ukladá zmeny do databáze / číta DB"
         TerminyDataController -> TerminySyncer "Posiela nové termíny"
         HlaseniNaTerminyController -> TerminySyncer "Posiela informácie o prihlásených/odhlásených študentoch"
@@ -145,10 +155,13 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         ucitel -> TerminyWebApp "Vytváří a zobrazuje termíny"
         ucitel -> TerminyWebApp "Zobrazení termínu"
         KonfliktDetektor -> TerminyUIServer "Posiela výsledky detekcie konfliktov"
-        TerminyUIServer -> Osoby "Zobrazí studenty na termínu"
-        TerminyUIServer -> Osoby "Zobrazí zkoušející učitele na termínu"
-        TerminyUIServer -> Predmety "Získá seznam vybraných předmětů"
-        TerminyUIServer -> Predmety "Získá informace o předmětu"
+        TerminyUIServer -> OsobyControllerVTerminoch "Žádost o získání seznamu studenty na termínu"
+        TerminyUIServer -> OsobyControllerVTerminoch "Žádost o získání zkoušejícího učitele na termínu"
+        TerminyUIServer -> PredmetyControllerVTerminoch "Žádost o získání seznamu vybraných předmětů"
+        TerminyUIServer -> PredmetyControllerVTerminoch "Žádost o získání informací o předmětu"
+        PredmetyControllerVTerminoch -> Predmety "Získání dat"
+        OsobyControllerVTerminoch -> Osoby "Získání dat"
+
 
         # Relationships inside ZnamkyUI
         ZnamkyWebApp -> ZnamkyUIServer "Žádá o UI známek"
@@ -161,9 +174,11 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         student -> ZnamkyWebApp "Zapisuje si zkoušky"
         ucitel -> ZnamkyWebApp "Zapisuje známky"
         ucitel -> ZnamkyWebApp "Zobrazuje známky"
-        ZnamkyUIServer -> Osoby "Získá informace o osobách pro zobrazení známek"
-        ZnamkyUIServer -> Predmety "Získá seznam vybraných předmětů"
-        ZnamkyUIServer -> Predmety "Získá informace o předmětu"
+        ZnamkyUIServer -> OsobyControllerVZnamkach "Žádost o získání informací o osobách pro zobrazení známek"
+        ZnamkyUIServer -> PredmetyControllerVZnamkach "Žádost o získání seznamu vybraných předmětů"
+        ZnamkyUIServer -> PredmetyControllerVZnamkach "Žádost o získání informací o předmětu"
+        PredmetyControllerVZnamkach -> Predmety "Získání dat"
+        OsobyControllerVZnamkach -> Osoby "Získání dat"
 
         deploymentEnvironment "Production" {
             
