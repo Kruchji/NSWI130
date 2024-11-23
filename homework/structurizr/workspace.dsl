@@ -119,7 +119,7 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         TemplateManager -> GeneratorObsahuSprav "Načítá šablóny pre generaciu obsahu"
         GeneratorObsahuSprav -> NotifikacieDispatcher "Poskytne obsah správy na poslanie"
         NotifikacieController -> TemplateManager "Požiada o použitie daného templatu pre správu"
-        NotifikacieController -> NotifikacieDispatcher "Poskytne získanú adresu z Osoby modulu"
+        NotifikacieController -> NotifikacieDispatcher "Pošle ďalej info o adresátovi"
         NotifikacieController -> GeneratorObsahuSprav "Poskytne info o termine/znamke ktoré sú obsahom správy"
         NotifikacieDispatcher -> ExtNotif "Poskytuje všetky info na na odoslanie notifikacie"
 
