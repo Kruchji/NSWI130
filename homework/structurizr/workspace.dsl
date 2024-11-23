@@ -18,7 +18,8 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
                     TerminyDataController = component "Termíny Data Controller" "Vytvorenie termínu; Úprava termínu"
                     TerminyDBController = component "Termíny DB Controller" "Komunikácia s databázou na termíny"
                     TerminySyncer = component "Synchronizácia termínov" "Posiela informácie o zmenách v termínoch pre použitie v ZnamkyDB"
-                    TerminyModel = component "Termíny Model" "Stará sa o logiku dát"
+                    TerminyModel = component "Termíny Model" "Stará sa o logiku dát pre termíny"
+                    CekaciListinaModel = component "Čekací Listina Model" "Stará sa o logiku dát pre čekací listinu"
                 }
                 TerminyDB = container "TermínyDB" "Ukladá info o termínoch, prihlásených studentech, čakajúcich studentech" "" "Database"
                 KonfliktDetektor = container "Konflikt Detektor" "Volá ho termíny manager, detekuje konflikty, reportuje stav termíny UI" {
@@ -130,8 +131,9 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
         TerminyUI -> CekaciListinaController "Posiela žiadost na prihlásenie/odhlásenie z čakacej listiny"
         TerminyDataController -> TerminyModel "Žiada o zmeny v DB ohľadom termínov" 
         HlaseniNaTerminyController -> TerminyModel "Žiada o uloženie info o prihásených študentoch"
-        CekaciListinaController -> TerminyModel "Žiada o uloženie info o studentoch na čakacej listine"
+        CekaciListinaController -> CekaciListinaModel "Žiada o uloženie info o studentoch na čakacej listine"
         TerminyModel -> TerminyDBController "Žiada o ukladanie / čítanie dát"
+        CekaciListinaModel -> TerminyDBController "Žiada o ukladanie / čítanie dát"
         TerminyDBController -> TerminyDB "Ukladá zmeny do databáze / číta DB"
         TerminyDataController -> TerminySyncer "Posiela nové termíny"
         HlaseniNaTerminyController -> TerminySyncer "Posiela informácie o prihlásených/odhlásených študentoch"
