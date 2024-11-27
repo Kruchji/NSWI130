@@ -219,8 +219,8 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             }
         }
 
-        deploymentEnvironment "Development" {
-            deploymentNode "Termíny Deployment" "" "" {
+        deploymentEnvironment "TerminyDevelopment" {
+            deploymentNode "Termíny Development" "" "" {
                 deploymentNode "Termíny UI" "" "" {
                     TerminyUIDevInstance = containerInstance TerminyUI
                 }
@@ -233,21 +233,12 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
                     }
                 }
             }
-            
-            deploymentNode "Známky Deployment" "" "" {
-                deploymentNode "Známky UI" "" "" {
-                    ZnamkyUIDevInstance = containerInstance ZnamkyUI
-                }
-                deploymentNode "Známky Managers and Analyzers" "" "" {
-                    deploymentNode "Známky Manager" "" "" {
-                        ZnamkyManagerDevInstance = containerInstance ZnamkyManager
-                    }
-                }
-                
-            }
 
-            deploymentNode "Mock DB pro Známky i Termíny" "" "" {
-                ZnamkyDBDevInstance = containerInstance ZnamkyDB
+            deploymentNode "Mock Známky Manager" "" "" {
+                ZnamkyManagerDevInstance = containerInstance ZnamkyManager
+            } 
+
+            deploymentNode "Mock DB pro Termíny" "" "" {
                 TerminyDBDevInstance = containerInstance TerminyDB
             }
         }
@@ -297,7 +288,7 @@ workspace "SIS Exams Workspace" "Tento workspace dokumentuje architekturu systé
             include *
         }
 
-        deployment SISExams "Development" "Development" {
+        deployment SISExams "TerminyDevelopment" "TerminyDevelopment" {
             include *
         }
 
