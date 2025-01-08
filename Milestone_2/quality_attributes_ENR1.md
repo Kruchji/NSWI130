@@ -12,10 +12,12 @@ Systém potrebuje zvládať nápory študentov počas otvorenia prihlasovania (t
 - Provider načíta a pošle celú históriu študenta Validatoru \-\> veľký objem dát  
 - sieť môže byť preťažená  
 - řešením by mohlo být dát je na společný server  
-  [EnrollmentValidator-1.png](https://drive.google.com/file/d/1S4Y8k7vPsBj7DLoNtxvTtmSPn7FviJaf/view?usp=drive_link)  
-  [EnrollmentRepository-1.png](https://drive.google.com/file/d/1WwXJTJmMZVaXNBYpzltDcF2qNC0RwcpX/view?usp=drive_link)  
-  [ProductionDiagram-1.png](https://drive.google.com/file/d/13CCeNf-Q4ocbLLWP9egZovduHujfIs-e/view?usp=drive_link)  
-  Provider a Validator sú na spoločnom serveri, v requestoch si posielajú iba minimum informácii, ktoré sú potrebné na identifikovanie želanej operácie, zvyšné dáta si Validator vytiahne z databáze sám.
+  
+![EnrollmentValidator](images/performance_1_1.png)
+![EnrollmentRepository](images/performance_1_2.png)
+![ProductionDiagram](images/performance_1_3.png)
+
+Provider a Validator sú na spoločnom serveri, v requestoch si posielajú iba minimum informácii, ktoré sú potrebné na identifikovanie želanej operácie, zvyšné dáta si Validator vytiahne z databáze sám.
 
 [Structurizr](https://pastebin.com/zZHSRGh8) (Oliver Lago)
 
@@ -46,9 +48,12 @@ Dostupnost systému zápisů je důležitá hlavně z pohledu uchování všech 
 
 - aktuálne Queue ukladá všetky dáta do pamäte, žiadna perzistencia, po reštarte sú všetky dáta stratené  
 - Enrollment Provider nie je fault tolerant  
-- řešením by mohlo být přidat vlastní databázi nebo ukládat také do databáze sdílené[Queue-2.png](https://drive.google.com/file/d/1UAe9rZFf3CPJNv-uP0gnUhNEF0cfxjb4/view?usp=drive_link)  
-  [ProductionDiagram-2.png](https://drive.google.com/file/d/1sIc9zcQHbWR6NQBvOZU65FypnUEzTiZx/view?usp=drive_link)  
-  Queue Monitor kontroluje stav Queue. Ak Queue spadne bude monitorom reštartovaná. Queue pravidelne ukladá svoj vnútorný stav do Queue Backup Database. Po reštarte budú z nej všetky dáta načítané.
+- řešením by mohlo být přidat vlastní databázi nebo ukládat také do databáze sdílené
+
+![Queue](images/availability_1_1.png) 
+![ProductionDiagram](images/availability_1_2.png)
+
+Queue Monitor kontroluje stav Queue. Ak Queue spadne bude monitorom reštartovaná. Queue pravidelne ukladá svoj vnútorný stav do Queue Backup Database. Po reštarte budú z nej všetky dáta načítané.
 
 [Structurizr](https://pastebin.com/5H0nR3h2) (Oliver Lago)
 
