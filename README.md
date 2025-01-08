@@ -2,7 +2,7 @@
 
 ### Milestone 1
 
-Our work on Milestone 1 can be found in the [Milestone_1](Milestone_1) directory. Specifically, [workspace.dsl](Milestone_1/workspace.dsl) contains architecture code / definition.
+Our work on Milestone 1 can be found in the [Milestone_1](Milestone_1) directory. Specifically, [workspace.dsl](Milestone_1/structurizr/workspace.dsl) contains architecture code / definition (with documentation in the [docs](Milestone_1/structurizr/docs) directory).
 
 ### Milestone 2
 
